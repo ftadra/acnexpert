@@ -1,0 +1,26 @@
+@import "../../../assets/styles/colors.scss";
+
+.e-header {
+  background: $white;
+
+  &--inverted {
+    background: transparent;
+
+    .c-link {
+      color: $white;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 15px;
+      list-style: none;
+    }
+  }
+
+  .c-link {
+    font-weight: 500;
+  }
+}

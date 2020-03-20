@@ -1,0 +1,24 @@
+{
+  "HEADER": {
+    "ACCUTANE_LINK": "Accutane",
+    "PRICING_LINK": "Pricing",
+    "ABOUT_LINK": "About Us",
+    "FAQ_LINK": "FAQ",
+    "LOGIN_LINK": "Login",
+    "CTA": "Get Started"
+  },
+  "FOOTER": {
+    "SECTIONS": {
+      "GET_STARTED": "Get Started",
+      "ABOUT_US": "AcneXpert",
+      "CONTACT_US": "Contact"
+    },
+    "REGISTER_LINK": "Register",
+    "LOGIN_LINK": "Login",
+    "TERMS_LINK": "Terms of Use",
+    "ABOUT_LINK": "About Us",
+    "FAQ_LINK": "FAQ",
+    "EMAIL_LINK": "Email Us",
+    "COPYRIGHT": "© 2020 AcneXpert. All rights reserved."
+  }
+}

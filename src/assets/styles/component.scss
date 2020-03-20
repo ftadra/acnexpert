@@ -1,0 +1,68 @@
+@import "../styles/colors.scss";
+@import "../styles/sizing.scss";
+
+.c-h-separator {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: $gray--300;
+}
+
+.c-v-separator {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background: $gray--300;
+}
+
+.c-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background: $primary--500;
+
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &--inverted {
+    color: $primary--500;
+    background: $white;
+  }
+}
+
+.c-link {
+  color: $primary--500;
+  white-space: nowrap;
+
+  &--clear {
+    text-decoration: none;
+  }
+}
+
+.c-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: $size-half 0;
+  }
+}
+
+.c-section {
+  &__title {
+    margin: 0;
+    margin-bottom: $size-one;
+    font-size: 1.2rem;
+  }
+
+  &__title-decoration {
+    display: block;
+    width: $size-double;
+    height: 4px;
+    margin-top: $size-half;
+    background: $primary--500;
+  }
+}

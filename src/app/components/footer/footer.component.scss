@@ -1,0 +1,45 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/sizing.scss";
+
+.e-footer {
+  padding: $size-double 0;
+  background: $footer-blue;
+  color: white;
+
+  .c-link {
+    color: white;
+  }
+
+  .e-copyright {
+    margin-top: $size-quad;
+    color: $gray--700;
+  }
+
+  .e-logo {
+    img {
+      height: 36px;
+    }
+  }
+
+  .e-social {
+    display: block;
+    margin-top: $size-one;
+
+    .e-link-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: $size-double;
+      height: $size-double;
+      margin-right: $size-half;
+      padding: $size-half;
+
+      border-radius: 50%;
+      border: 1px solid $primary--500;
+
+      color: $primary--500;
+      font-size: $size-one-half;
+    }
+  }
+}

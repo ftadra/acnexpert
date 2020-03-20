@@ -1,0 +1,27 @@
+.l-container {
+  display: flex;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.l-grid {
+  display: flex;
+  width: 100%;
+
+  &--c2 {
+    > .l-grid__item {
+      width: 50%;
+    }
+  }
+
+  &--c3 {
+    > .l-grid__item {
+      width: 33.3%;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+}

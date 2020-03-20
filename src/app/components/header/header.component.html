@@ -1,0 +1,46 @@
+<header class="e-header" [class.e-header--inverted]="isInverted">
+  <div class="l-container">
+    <div class="l-grid l-grid--c2">
+      <div class="l-grid__item">
+        <img src="./assets/images/logo.png" />
+      </div>
+      <div class="l-grid__item u-align-h-center">
+        <ul class="u-align-v-right">
+          <li>
+            <a class="c-link c-link--clear" [routerLink]="['/accutane']">
+              {{ "HEADER.ACCUTANE_LINK" | translate }}
+            </a>
+          </li>
+          <li>
+            <a class="c-link c-link--clear" [routerLink]="['/pricing']">
+              {{ "HEADER.PRICING_LINK" | translate }}
+            </a>
+          </li>
+          <li>
+            <a class="c-link c-link--clear" [routerLink]="['/about']">
+              {{ "HEADER.ABOUT_LINK" | translate }}
+            </a>
+          </li>
+          <li>
+            <a class="c-link c-link--clear" [routerLink]="['/faq']">
+              {{ "HEADER.FAQ_LINK" | translate }}
+            </a>
+          </li>
+          <li>
+            <span class="c-v-separator"></span>
+          </li>
+          <li>
+            <a class="c-link c-link--clear" [routerLink]="['/login']">
+              {{ "HEADER.LOGIN_LINK" | translate }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/account/create']" class="c-btn c-btn--inverted">
+              {{ "HEADER.CTA" | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
