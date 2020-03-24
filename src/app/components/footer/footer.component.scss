@@ -6,6 +6,10 @@
   background: $footer-blue;
   color: white;
 
+  .l-container {
+    flex-direction: row;
+  }
+
   .c-link {
     color: white;
   }

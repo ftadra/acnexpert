@@ -2,12 +2,24 @@
 
 .e-header {
   background: $white;
+  height: 80px;
 
   &--inverted {
     background: transparent;
 
     .c-link {
-      color: $white;
+      color: $white !important;
+    }
+  }
+
+  .l-grid {
+    align-items: center;
+  }
+
+  .e-logo {
+    img {
+      margin-top: 10px;
+      height: 36px;
     }
   }
 

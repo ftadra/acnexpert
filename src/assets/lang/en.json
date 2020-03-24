@@ -20,5 +20,82 @@
     "FAQ_LINK": "FAQ",
     "EMAIL_LINK": "Email Us",
     "COPYRIGHT": "© 2020 AcneXpert. All rights reserved."
+  },
+  "HOME": {
+    "HERO": {
+      "TITLE_SUB": "Accutane Means",
+      "TITLE_MAIN": "Acne-Free",
+      "DESCRIPTION": "AcneXpert is the only telemedicine service that can treat you with Accutane, the world’s single most effective acne cure.",
+      "QUIZ_CTA": "Take The Quiz",
+      "ACCOUNT_CTA": "Get Started"
+    },
+    "WHY_ACCUTANE": {
+      "TITLE": "Why Accutane?",
+      "DESCRIPTION": "Accutane is the only acne medication that can permanently alter the natural course of acne. ",
+      "LIST_1": "85% of patients are clear of acne by week 16.",
+      "LIST_2": "90% reduction in sebum (oil) within 6 weeks",
+      "LIST_3": "Single most effective acne therapy",
+      "LIST_4": "FDA approved since 1982 for acne treatment.",
+      "LIST_5": "Comes in the form of a pill, not a cream",
+      "LEARN_MORE_LINK": "Learn More"
+    },
+    "CTA": {
+      "TITLE": "Introduce your acne to the \n life-altering potential of Accutane.",
+      "REGISTER_LINK": "Create an Account",
+      "QUIZ_CTA": "Take The Quiz"
+    },
+    "HOW_IT_WORKS": {
+      "TITLE": "How AcneXperts works",
+      "DESCRIPTION": "Our five step treatment plan only takes five months to show life changing results.",
+      "BOX_1_TITLE": "1. Sign Up",
+      "BOX_1_DESCRIPTION": "Getting your AcneXpert account up and ready for action only takes five minutes.",
+      "BOX_2_TITLE": "2. Profile Setup",
+      "BOX_2_DESCRIPTION": "We’ll need a few clinical details in order to customize your treatment plan.",
+      "BOX_3_TITLE": "3. Meet Your Doctor",
+      "BOX_3_DESCRIPTION": "One of our U.S. board certified physicians will call you and walk you through everything you need to know about your treatment.",
+      "BOX_4_TITLE": "4. Begin Treatment",
+      "BOX_4_DESCRIPTION": "Once you’ve picked up your prescription from the pharmacy, you’re good to go. ",
+      "BOX_5_TITLE": "5. Check In Monthly",
+      "BOX_5_DESCRIPTION": "To track your progress, we'll need you to send monthly pictures of your acne and a follow up form.",
+      "BOX_6_TITLE": "Register \n Today",
+      "BOX_6_DESCRIPTION": "It’s just $59 for the first consultation.",
+      "BOX_6_CTA": "Get Started"
+    },
+    "BEFORE_AFTER": {
+      "TITLE": "Drastic, Visible Results",
+      "DESCRIPTION": "What’s really special about Accutane is that the results are so dramatic — not to mention easy to see.",
+      "FACIAL_ACNE": "Facial acne",
+      "BODY_ACNE": "Body acne",
+      "BACK_ACNE": "Back acne",
+      "ACNE_FREE": "Acne-free in"
+    },
+    "PRICING": {
+      "TITLE": "Being online means \n no more in-person appointments",
+      "DESCRIPTION": "Forget back-and-forth phone calls, long periods in the waiting room, and trying to find parking. You’ll be treated right at home. We’ll even deliver your prescription to your favorite pharmacy.",
+      "FACIAL_ACNE": "Facial acne",
+      "PRICING_TITLE_1": "First Consultation",
+      "PRICING_VALUE_1": "$59",
+      "PRICING_TITLE_2": "Monthly Treatment",
+      "PRICING_VALUE_2": "$99",
+      "PRICING_TITLE_3": "Medication",
+      "PRICING_VALUE_3": "Not Included",
+      "INSURANCE_COVERED": "Usually covered by insurance. Meaning you’ll only pay a small copay at the pharmacy.",
+      "LEARN_MORE_CTA": "Learn More"
+    },
+    "ADVANTAGES": {
+      "TITLE": "Simplify your treatment",
+      "ADVANTAGE_TITLE_1": "Right at Home",
+      "ADVANTAGE_TEXT_1": "Reap the life-changing benefits of Accutane therapy from the comfort of your own home.",
+      "ADVANTAGE_TITLE_2": "AcneXperts",
+      "ADVANTAGE_TEXT_2": "Our specialist board certified licensed U.S.physicians have years of experience working with Accutane.",
+      "ADVANTAGE_TITLE_3": "Remote Doctor Visits",
+      "ADVANTAGE_TEXT_3": "You’ll be able to meet with your physician remotely, so there’s no need for regular in-person visits.",
+      "ADVANTAGE_TITLE_4": "Convenient",
+      "ADVANTAGE_TEXT_4": "Clear up your acne from the comfort & privacy of your own home.",
+      "ADVANTAGE_TITLE_5": "Local Pharmacy",
+      "ADVANTAGE_TEXT_5": "Your prescription will be sent to your local pharmacy where you can easily and quickly pick it up.",
+      "ADVANTAGE_TITLE_6": "Inexpensive",
+      "ADVANTAGE_TEXT_6": "Clear up your acne without breaking the bank. You don’t even need to leave your neighborhood."
+    }
   }
 }

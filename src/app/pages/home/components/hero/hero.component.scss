@@ -1,0 +1,22 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.e-hero {
+  padding: 140px 0;
+  margin-top: -80px;
+  background-image: url("../../../../../assets/images/hero.png");
+  background-position: right bottom;
+  color: white;
+
+  &__overtitle {
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: -1rem;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+  }
+}

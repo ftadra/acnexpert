@@ -15,6 +15,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { HeroComponent } from './pages/home/components/hero/hero.component';
+import { BeforeAfterComponent } from './pages/home/components/before-after/before-after.component';
+import { CtaComponent } from './pages/home/components/cta/cta.component';
+import { AdvantagesComponent } from './pages/home/components/advantages/advantages.component';
+import { HowItWorksComponent } from './pages/home/components/how-it-works/how-it-works.component';
+import { PricingComponent } from './pages/home/components/pricing/pricing.component';
+import { WhyAccutaneComponent } from './pages/home/components/why-accutane/why-accutane.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,7 +32,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    HeroComponent,
+    BeforeAfterComponent,
+    CtaComponent,
+    AdvantagesComponent,
+    HowItWorksComponent,
+    PricingComponent,
+    WhyAccutaneComponent
   ],
   imports: [
     BrowserModule,

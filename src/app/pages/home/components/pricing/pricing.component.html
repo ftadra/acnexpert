@@ -1,0 +1,64 @@
+<div class="e-pricing l-container">
+    <div class="l-grid l-grid--c2">
+        <div class="l-grid__item u-flex-direction-column u-flex-justify-center">
+            <div class="l-linelength l-linelength--tiny-2 u-margin-left-quad">
+                <h3 class="e-pricing__title">{{ "HOME.PRICING.TITLE" | translate }}</h3>
+                <p class="e-pricing__description">
+                    {{ "HOME.PRICING.DESCRIPTION" | translate }}
+                </p>
+
+                <ul class="c-list c-list--checkmark">
+                    <li class="c-list__item">
+                        <fa-icon
+                            class="c-list__checkmark"
+                            [icon]="['fas', 'stethoscope']"
+                        ></fa-icon>
+                        {{ "HOME.PRICING.PRICING_TITLE_1" | translate }}
+                        <span class="e-pricing__price">
+                            {{ "HOME.PRICING.PRICING_VALUE_1" | translate }}
+                        </span>
+                    </li>
+                    <li class="c-list__item">
+                        <fa-icon
+                            class="c-list__checkmark"
+                            [icon]="['fas', 'sync-alt']"
+                        ></fa-icon>
+                        {{ "HOME.PRICING.PRICING_TITLE_2" | translate }}
+                        <span class="e-pricing__price">
+                            {{ "HOME.PRICING.PRICING_VALUE_2" | translate }}
+                        </span>
+                    </li>
+                    <li class="c-list__item">
+                        <fa-icon
+                            class="c-list__checkmark"
+                            [icon]="['fas', 'prescription-bottle-alt']"
+                        ></fa-icon>
+                        {{ "HOME.PRICING.PRICING_TITLE_3" | translate }}
+                        <div class="e-pricing__disable">
+                            {{ "HOME.PRICING.PRICING_VALUE_3" | translate }}
+                            <div class="e-pricing__tooltip">
+                                <img src="../../../../../assets/images/drawn-arrow.svg">
+                                <p>
+                                    {{ "HOME.PRICING.INSURANCE_COVERED" | translate }}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="u-margin-top-double">
+                    <a
+                        routerLink="/pricing"
+                        class="c-link"
+                    >
+                        {{ "HOME.PRICING.LEARN_MORE_CTA" | translate }}
+                        <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="l-grid__item l-grid__item--illustration">
+            <img src="../../../../../assets/images/Illustration-6.svg">
+        </div>
+    </div>
+</div>

@@ -1,13 +1,19 @@
+@import "../styles/sizing.scss";
+
 .l-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   max-width: 1366px;
   margin: 0 auto;
 }
 
 .l-grid {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  margin: 0 -1rem;
 
   &--c2 {
     > .l-grid__item {
@@ -23,5 +29,35 @@
 
   &__item {
     display: flex;
+    flex-direction: column;
+    padding: $size-one;
+  }
+}
+
+.l-linelength {
+  max-width: 64rem;
+
+  &--tiny {
+    max-width: 20rem;
+  }
+
+  &--tiny-2 {
+    max-width: 23rem;
+  }
+
+  &--xs {
+    max-width: 26rem;
+  }
+
+  &--small {
+    max-width: 32rem;
+  }
+
+  &--medium {
+    max-width: 38rem;
+  }
+
+  &--large {
+    max-width: 44rem;
   }
 }

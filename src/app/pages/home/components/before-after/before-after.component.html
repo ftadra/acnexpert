@@ -1,0 +1,84 @@
+<div class="e-container">
+    <div class="l-container">
+        <div class="e-title l-linelength l-linelength--xs">
+            <h4>
+                {{ "HOME.BEFORE_AFTER.TITLE" | translate }}
+            </h4>
+            <p>
+                {{ "HOME.BEFORE_AFTER.DESCRIPTION" | translate }}
+            </p>
+        </div>
+        <div class="l-grid l-grid--c2">
+            <div class="l-grid__item e-pictures">
+                <img
+                    class="e-picture e-picture--before"
+                    [src]="data[currentIndex].images.before"
+                >
+                <img
+                    class="e-picture e-picture--after"
+                    [src]="data[currentIndex].images.after"
+                >
+            </div>
+            <div class="l-grid__item">
+                <div class="e-profile s-background-white">
+                    <h4>{{ data[currentIndex].name }}</h4>
+                    <p class="e-occupation">
+                        {{ data[currentIndex].age }}, {{ data[currentIndex].occupation }}
+                    </p>
+
+                    <p>{{ data[currentIndex].story }}</p>
+
+                    <ul
+                        class="c-list"
+                        [ngSwitch]="data[currentIndex].clinical.body_part"
+                    >
+                        <li
+                            class="c-list__item"
+                            *ngSwitchCase="'facial'"
+                        >
+                            <img
+                                class="c-list__icon"
+                                src="../../../../../assets/images/icons/face.svg"
+                            >
+                            {{ "HOME.BEFORE_AFTER.FACIAL_ACNE" | translate }}
+                        </li>
+                        <li
+                            class="c-list__item"
+                            *ngSwitchCase="'back'"
+                        >
+                            <img
+                                class="c-list__icon"
+                                src="../../../../../assets/images/icons/back.svg"
+                            >
+                            {{ "HOME.BEFORE_AFTER.BACK_ACNE" | translate }}
+                        </li>
+                        <li
+                            class="c-list__item"
+                            *ngSwitchCase="'body'"
+                        >
+                            <img
+                                class="c-list__icon"
+                                src="../../../../../assets/images/icons/body.svg"
+                            >
+                            {{ "HOME.BEFORE_AFTER.BODY_ACNE" | translate }}
+                        </li>
+                        <li class="c-list__item">
+                            <img
+                                class="c-list__icon"
+                                src="../../../../../assets/images/icons/tablet.svg"
+                            >
+                            {{ data[currentIndex].clinical.dosage }}
+                        </li>
+                        <li class="c-list__item">
+                            <img
+                                class="c-list__icon"
+                                src="../../../../../assets/images/icons/calendar.svg"
+                            >
+                            {{ "HOME.BEFORE_AFTER.ACNE_FREE" | translate }} {{ data[currentIndex].clinical.acne_free }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

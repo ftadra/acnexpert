@@ -1,0 +1,60 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-container {
+  background: $primary--100;
+  background-image: url("../../../../../assets/images/Decoration.svg");
+  padding: 100px 0;
+}
+
+.l-container {
+  align-items: center;
+
+  .e-title {
+    margin-bottom: $size-double;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: $gray--800;
+    }
+  }
+
+  .e-occupation {
+    color: $gray--600;
+  }
+
+  .e-pictures {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .e-picture {
+      width: auto;
+      height: 70%;
+
+      &--before {
+        position: relative;
+        z-index: 2;
+        margin-right: -2rem;
+        align-self: flex-end;
+      }
+
+      &--after {
+        margin-right: -2rem;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  .e-profile {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+    z-index: 3;
+    background: $white;
+    padding: $size-double;
+    margin-left: -2rem;
+    margin-top: 3rem;
+  }
+}

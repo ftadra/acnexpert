@@ -1,0 +1,93 @@
+<div class="e-advantages l-container">
+
+    <h4>
+        {{ "HOME.ADVANTAGES.TITLE" | translate }}
+    </h4>
+
+    <div class="e-advantages__carrousel">
+        <div class="e-advantages__carrousel-left">
+            <ul class="c-list">
+                <li
+                    class="c-list__item"
+                    (click)="select(1);"
+                    [class.active]="currentIndex === 1"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['fas', 'home']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_1" | translate }}
+                </li>
+                <li
+                    class="c-list__item"
+                    (click)="select(2);"
+                    [class.active]="currentIndex === 2"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['fas', 'award']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_2" | translate }}
+                </li>
+                <li
+                    class="c-list__item"
+                    (click)="select(3);"
+                    [class.active]="currentIndex === 3"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['fas', 'phone']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_3" | translate }}
+                </li>
+            </ul>
+        </div>
+        <div class="e-advantages__carrousel-center">
+            <img [src]="images[currentIndex]">
+        </div>
+        <div class="e-advantages__carrousel-right">
+            <ul class="c-list">
+                <li
+                    class="c-list__item"
+                    (click)="select(4);"
+                    [class.active]="currentIndex === 4"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['fas', 'smile-wink']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_4" | translate }}
+                </li>
+                <li
+                    class="c-list__item"
+                    (click)="select(5);"
+                    [class.active]="currentIndex === 5"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['fas', 'clinic-medical']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_5" | translate }}
+                </li>
+                <li
+                    class="c-list__item"
+                    (click)="select(6);"
+                    [class.active]="currentIndex === 6"
+                >
+                    <fa-icon
+                        class="c-list__checkmark"
+                        [icon]="['far', 'credit-card']"
+                    ></fa-icon>
+                    {{ "HOME.ADVANTAGES.ADVANTAGE_TITLE_6" | translate }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="l-linelength l-linelength--medium">
+        <h5>
+            {{ "HOME.ADVANTAGES.ADVANTAGE_TEXT_" + currentIndex | translate }}
+        </h5>
+    </div>
+
+</div>

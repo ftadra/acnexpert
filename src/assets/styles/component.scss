@@ -1,34 +1,50 @@
 @import "../styles/colors.scss";
 @import "../styles/sizing.scss";
 
-.c-h-separator {
-  display: inline-block;
-  width: 100%;
+hr {
+  width: 24rem;
   height: 1px;
-  background: $gray--300;
+  margin: 0 auto;
+  background-color: $gray--300;
+  border: 0;
 }
 
 .c-v-separator {
-  display: inline-block;
+  display: block;
   width: 1px;
   height: 100%;
   background: $gray--300;
 }
 
 .c-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
+  padding: $size-half $size-one-half;
+  border-radius: $size-double;
   background: $primary--500;
 
   color: $white;
+  font-size: 0.9rem;
   font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
 
+  &--large {
+    padding: $size-one $size-double;
+  }
+
   &--inverted {
     color: $primary--500;
     background: $white;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid white;
+
+    .c-btn--inverted {
+      border-color: $primary--500;
+    }
   }
 }
 
@@ -39,6 +55,11 @@
   &--clear {
     text-decoration: none;
   }
+
+  fa-icon {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+  }
 }
 
 .c-list {
@@ -47,7 +68,20 @@
   padding: 0;
 
   &__item {
-    padding: $size-half 0;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  &__checkmark {
+    margin-right: $size-half;
+    color: $primary--500;
+    font-size: 1.2rem;
+  }
+
+  &__icon {
+    width: 26px;
+    margin-right: $size-one;
   }
 }
 

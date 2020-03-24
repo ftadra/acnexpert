@@ -1,0 +1,26 @@
+<div class="e-hero">
+    <div class="l-container">
+        <div class="l-grid l-grid--c2">
+            <div class="l-grid__item u-flex-direction-column">
+                <h2 class="e-hero__overtitle">
+                    {{ "HOME.HERO.TITLE_SUB" | translate }}
+                </h2>
+                <h1 class="e-hero__title">
+                    {{ "HOME.HERO.TITLE_MAIN" | translate }}
+                </h1>
+                <p class="e-hero__description l-linelength l-linelength--tiny">
+                    {{ "HOME.HERO.DESCRIPTION" | translate }}
+                </p>
+                <div class="u-display-flex u-margin-top-double">
+                    <a class="c-btn c-btn--inverted u-margin-right">
+                        {{ "HOME.HERO.QUIZ_CTA" | translate }}
+                    </a>
+                    <a class="c-btn c-btn--outline" [routerLink]="['/account/create']">
+                        {{ "HOME.HERO.ACCOUNT_CTA" | translate }}
+                    </a>
+                </div>
+            </div>
+            <div class="l-grid__item"></div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+@import "../styles/sizing.scss";
+
 // ALIGN
 .u-align-v-left {
   margin-right: auto;
@@ -14,6 +16,18 @@
 // DISPLAY
 .u-display-flex {
   display: flex;
+}
+
+.u-flex-direction-column {
+  flex-direction: column;
+}
+
+.u-flex-align-center {
+  align-items: center;
+}
+
+.u-flex-justify-center {
+  justify-content: center;
 }
 
 // WIDTH
@@ -80,4 +94,85 @@
 
 .u-max-width--100 {
   max-width: 100%;
+}
+
+// MARGIN
+.u-margin-left-half {
+  margin-left: $size-half;
+}
+
+.u-margin-left {
+  margin-left: $size-one;
+}
+
+.u-margin-left-double {
+  margin-left: $size-double;
+}
+
+.u-margin-left-quad {
+  margin-left: $size-quad;
+}
+
+.u-margin-right-half {
+  margin-right: $size-half;
+}
+
+.u-margin-right {
+  margin-right: $size-one;
+}
+
+.u-margin-right-double {
+  margin-right: $size-double;
+}
+
+.u-margin-right-quad {
+  margin-right: $size-quad;
+}
+
+.u-margin-top-half {
+  margin-top: $size-half;
+}
+
+.u-margin-top {
+  margin-top: $size-one;
+}
+
+.u-margin-top-double {
+  margin-top: $size-double;
+}
+
+.u-margin-top-quad {
+  margin-top: $size-quad;
+}
+
+.u-margin-top-large {
+  margin-top: 100px;
+}
+
+.u-margin-top-med {
+  margin-top: 50px;
+}
+
+.u-margin-bottom-half {
+  margin-bottom: $size-half;
+}
+
+.u-margin-bottom {
+  margin-bottom: $size-one;
+}
+
+.u-margin-bottom-double {
+  margin-bottom: $size-double;
+}
+
+.u-margin-bottom-quad {
+  margin-bottom: $size-quad;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 100px;
+}
+
+.u-margin-bottom-med {
+  margin-bottom: 50px;
 }

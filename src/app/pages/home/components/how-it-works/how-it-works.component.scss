@@ -1,0 +1,32 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.l-container {
+  align-items: center;
+
+  .e-title {
+    margin-bottom: $size-double;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: $gray--800;
+    }
+  }
+
+  .l-grid {
+    max-width: 64rem;
+
+    .l-grid__item {
+      padding: $size-one $size-quad;
+
+      img {
+        margin-bottom: $size-double;
+      }
+
+      p {
+        color: $gray--700;
+      }
+    }
+  }
+}
