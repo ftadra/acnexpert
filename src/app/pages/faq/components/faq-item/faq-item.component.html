@@ -1,0 +1,11 @@
+<div class="e-faq-item" [class.e-faq-item--expanded]="!collapsed">
+  <div class="e-faq-item__header" (click)="toggleCollapse()">
+    <p>{{ item.question }}</p>
+
+    <fa-icon *ngIf="collapsed" [icon]="['fas', 'plus']"></fa-icon>
+    <fa-icon *ngIf="!collapsed" [icon]="['fas', 'minus']"></fa-icon>
+  </div>
+  <p class="e-faq-item__description" *ngIf="!collapsed">
+    {{ item.answer }}
+  </p>
+</div>

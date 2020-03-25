@@ -1,0 +1,28 @@
+@import "../../../assets/styles/sizing.scss";
+@import "../../../assets/styles/colors.scss";
+
+.e-about {
+  .l-grid__item {
+    justify-content: center;
+  }
+
+  &__story {
+    img {
+      max-width: 600px;
+    }
+
+    &-description {
+      padding-left: $size-quad;
+
+      p {
+        margin: 0;
+        color: $gray--800;
+      }
+    }
+  }
+
+  &__mission {
+    color: $gray--800;
+    text-align: center;
+  }
+}

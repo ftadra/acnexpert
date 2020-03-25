@@ -1,0 +1,58 @@
+<app-common-page-header
+  [title]="'ACCUTANE.TITLE' | translate"
+  [description]="'ACCUTANE.DESCRIPTION' | translate"
+>
+</app-common-page-header>
+
+<div class="e-accutane l-container u-flex-align-center u-margin-top-large">
+  <div class="e-accutane__story l-grid l-grid--c2">
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-14.svg" />
+    </div>
+    <div class="l-grid__item e-accutane__story-description">
+      <div class="l-linelength l-linelength--xs">
+        <h4>{{ "ACCUTANE.STORY.TITLE" | translate }}</h4>
+        <p>{{ "ACCUTANE.STORY.DESCRIPTION" | translate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-top-large u-margin-bottom-large" />
+
+  <div class="u-text-align-center">
+    <h5>{{ "ACCUTANE.WHY.TITLE" | translate }}</h5>
+    <ul class="c-list c-list--checkmark">
+      <li class="c-list__item">
+        <fa-icon class="c-list__checkmark" [icon]="['fas', 'check']"></fa-icon>
+        {{ "WHY_ACCUTANE.LIST_1" | translate }}
+      </li>
+      <li class="c-list__item">
+        <fa-icon class="c-list__checkmark" [icon]="['fas', 'check']"></fa-icon>
+        {{ "WHY_ACCUTANE.LIST_2" | translate }}
+      </li>
+      <li class="c-list__item">
+        <fa-icon class="c-list__checkmark" [icon]="['fas', 'check']"></fa-icon>
+        {{ "WHY_ACCUTANE.LIST_3" | translate }}
+      </li>
+      <li class="c-list__item">
+        <fa-icon class="c-list__checkmark" [icon]="['fas', 'check']"></fa-icon>
+        {{ "WHY_ACCUTANE.LIST_4" | translate }}
+      </li>
+      <li class="c-list__item">
+        <fa-icon class="c-list__checkmark" [icon]="['fas', 'check']"></fa-icon>
+        {{ "WHY_ACCUTANE.LIST_5" | translate }}
+      </li>
+    </ul>
+  </div>
+
+  <hr class="u-margin-top-large u-margin-bottom-large" />
+
+  <div class="u-width--100 l-linelength l-linelength--medium">
+    <h5 class="u-text-align-center u-margin-bottom-double">
+      {{ "ACCUTANE.FAQ" | translate }}
+    </h5>
+    <app-faq-item *ngFor="let item of faq" [item]="item"></app-faq-item>
+  </div>
+</div>
+
+<app-learn-more-footer></app-learn-more-footer>

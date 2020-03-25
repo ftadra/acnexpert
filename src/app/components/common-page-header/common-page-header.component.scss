@@ -1,0 +1,11 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/sizing.scss";
+
+.e-page-header {
+  padding: $size-quad 0;
+  background: $primary--100;
+
+  .l-container {
+    align-items: center;
+  }
+}

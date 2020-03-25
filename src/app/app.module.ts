@@ -22,6 +22,12 @@ import { AdvantagesComponent } from './pages/home/components/advantages/advantag
 import { HowItWorksComponent } from './pages/home/components/how-it-works/how-it-works.component';
 import { PricingComponent } from './pages/home/components/pricing/pricing.component';
 import { WhyAccutaneComponent } from './pages/home/components/why-accutane/why-accutane.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { CommonPageHeaderComponent } from './components/common-page-header/common-page-header.component';
+import { FaqItemComponent } from './pages/faq/components/faq-item/faq-item.component';
+import { LearnMoreFooterComponent } from './components/learn-more-footer/learn-more-footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AccutaneComponent } from './pages/accutane/accutane.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -39,7 +45,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdvantagesComponent,
     HowItWorksComponent,
     PricingComponent,
-    WhyAccutaneComponent
+    WhyAccutaneComponent,
+    FaqComponent,
+    CommonPageHeaderComponent,
+    FaqItemComponent,
+    LearnMoreFooterComponent,
+    AboutComponent,
+    AccutaneComponent
   ],
   imports: [
     BrowserModule,

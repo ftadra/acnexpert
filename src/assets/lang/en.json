@@ -32,11 +32,6 @@
     "WHY_ACCUTANE": {
       "TITLE": "Why Accutane?",
       "DESCRIPTION": "Accutane is the only acne medication that can permanently alter the natural course of acne. ",
-      "LIST_1": "85% of patients are clear of acne by week 16.",
-      "LIST_2": "90% reduction in sebum (oil) within 6 weeks",
-      "LIST_3": "Single most effective acne therapy",
-      "LIST_4": "FDA approved since 1982 for acne treatment.",
-      "LIST_5": "Comes in the form of a pill, not a cream",
       "LEARN_MORE_LINK": "Learn More"
     },
     "CTA": {
@@ -97,5 +92,45 @@
       "ADVANTAGE_TITLE_6": "Inexpensive",
       "ADVANTAGE_TEXT_6": "Clear up your acne without breaking the bank. You don’t even need to leave your neighborhood."
     }
+  },
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions",
+    "DESCRIPTION": "Don’t worry, we’re here to help"
+  },
+  "LEARN_MORE_FOOTER": {
+    "TITLE": "Want to learn more?",
+    "DESCRIPTION": "Get in touch with us, we’d love to chat!",
+    "SUPPORT_EMAIL": "support@acnexpert.com"
+  },
+  "WHY_ACCUTANE": {
+    "LIST_1": "85% of patients are clear of acne by week 16.",
+    "LIST_2": "90% reduction in sebum (oil) within 6 weeks",
+    "LIST_3": "Single most effective acne therapy",
+    "LIST_4": "FDA approved since 1982 for acne treatment.",
+    "LIST_5": "Comes in the form of a pill, not a cream"
+  },
+  "ABOUT": {
+    "TITLE": "About AcneXpert",
+    "DESCRIPTION": "It’s nice to meet you. Let us introduce ourselves.",
+    "STORY": {
+      "TITLE": "It all started…",
+      "DESCRIPTION": "AcneXpert was founded by board certified US physicians with extensive experience treating patients with Accutane (isotretinoin). \n\n It’s the first online medicine service that gives patients across the country access to treatment with Accutane, which is the single most effective therapy for acne there is. \n\n By cutting out landlord fees and creating a straightforward treatment pipeline, AcneXpert can offer a more affordable medical service —all from the comfort of the patient’s own home and favorite local pharmacy."
+    },
+    "MISSION": {
+      "TITLE": "Our Mission",
+      "DESCRIPTION": "Getting acne-free is a life-changing experience. \n\n More than 30% of America’s teenagers have low self-esteem due to acne. Accutane clears 85% of patients of ALL acne by Week 16, and produces long-term remission. \n\n Seeing a doctor in person once a month left the treatment out of reach for so many busy teens, young adults, and parents. \n\n We believe that people everywhere should be able to take full advantage of Accutane’s benefits in a safe and convenient way. We’re committed to helping our patients banish their acne for good, and to providing remote care of the very highest standard."
+    }
+  },
+  "ACCUTANE": {
+    "TITLE": "Accutane",
+    "DESCRIPTION": "The single most effective therapy for acne there is.",
+    "STORY": {
+      "TITLE": "What Is Accutane?",
+      "DESCRIPTION": "Accutane has been approved by the FDA since 1982 for acne treatment, and is still theonly therapy that impacts all of the causes of acne. \n\n In addition to as lowering sebum (oil) production by 90% within six weeks, Accutane (which also has anti-inflammatory properties) produces long-term remission. By Week 16 of the therapy, 85% of patients are cleared of acne. There are around one million Accutane prescriptions processed in the US every year."
+    },
+    "WHY": {
+      "TITLE": "Why Accutane?"
+    },
+    "FAQ": "Frequently Asked Questions"
   }
 }

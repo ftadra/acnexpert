@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public isInverted = true;
+  public isInverted = false;
 
   constructor() { }
 

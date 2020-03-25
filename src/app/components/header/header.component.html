@@ -9,7 +9,14 @@
                     class="e-logo"
                     [routerLink]="['/home']"
                 >
-                    <img src="./assets/images/logo.png">
+                    <img
+                        *ngIf="!isInverted"
+                        src="./assets/images/logo.png"
+                    >
+                    <img
+                        *ngIf="isInverted"
+                        src="./assets/images/logo-white.png"
+                    >
                 </a>
             </div>
             <div class="l-grid__item u-align-h-center">
@@ -60,7 +67,8 @@
                     <li>
                         <a
                             [routerLink]="['/account/create']"
-                            class="c-btn c-btn--inverted"
+                            class="c-btn"
+                            [class.c-btn--inverted]="isInverted"
                         >
                             {{ "HEADER.CTA" | translate }}
                         </a>

@@ -1,0 +1,49 @@
+@import "../../../../../assets/styles/sizing.scss";
+@import "../../../../../assets/styles/colors.scss";
+
+:host {
+  &:last-child {
+    .e-faq-item {
+      border-bottom: 0;
+    }
+  }
+}
+
+.e-faq-item {
+  padding: $size-one 0;
+  border-bottom: 1px solid $gray--200;
+
+  &--expanded {
+    width: calc(100% + 2rem);
+    padding: $size-one;
+    margin-left: 0 -$size-one;
+    margin-top: -1px;
+    border: 1px solid $gray--200;
+
+    .e-faq-item__header {
+      font-weight: 600;
+    }
+  }
+
+  &__header {
+    display: flex;
+    cursor: pointer;
+
+    p {
+      margin: 0;
+    }
+
+    fa-icon {
+      width: 30px;
+      margin-left: auto;
+      color: $primary--500;
+      text-align: right;
+    }
+  }
+
+  &__description {
+    margin-top: $size-half;
+    color: $gray--700;
+    font-size: 0.95rem;
+  }
+}

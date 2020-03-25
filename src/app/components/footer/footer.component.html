@@ -1,88 +1,110 @@
 <header class="e-footer">
-  <div class="l-container">
-    <div class="l-grid l-grid--c3 u-max-width--66 u-width--100">
-      <div class="l-grid__item">
-        <div class="c-section">
-          <h6 class="c-section__title s-color-white">
-            {{ "FOOTER.SECTIONS.GET_STARTED" | translate }}
-            <span class="c-section__title-decoration"></span>
-          </h6>
-          <ul class="c-list">
-            <li class="c-list__item">
-              <a class="c-link c-link--clear" [routerLink]="['/login']">
-                {{ "FOOTER.LOGIN_LINK" | translate }}
-              </a>
-            </li>
-            <li class="c-list__item">
-              <a
-                class="c-link c-link--clear"
-                [routerLink]="['/account/create']"
-              >
-                {{ "FOOTER.REGISTER_LINK" | translate }}
-              </a>
-            </li>
-          </ul>
+    <div class="l-container">
+        <div class="l-grid l-grid--c3 u-max-width--66 u-width--100">
+            <div class="l-grid__item">
+                <div class="c-section">
+                    <h6 class="c-section__title s-color-white">
+                        {{ "FOOTER.SECTIONS.GET_STARTED" | translate }}
+                        <span class="c-section__title-decoration"></span>
+                    </h6>
+                    <ul class="c-list">
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/login']"
+                            >
+                                {{ "FOOTER.LOGIN_LINK" | translate }}
+                            </a>
+                        </li>
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/account/create']"
+                            >
+                                {{ "FOOTER.REGISTER_LINK" | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-grid__item">
+                <div class="c-section">
+                    <h6 class="c-section__title s-color-white">
+                        {{ "FOOTER.SECTIONS.ABOUT_US" | translate }}
+                        <span class="c-section__title-decoration"></span>
+                    </h6>
+                    <ul class="c-list">
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/about']"
+                            >
+                                {{ "FOOTER.ABOUT_LINK" | translate }}
+                            </a>
+                        </li>
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/terms/tos']"
+                            >
+                                {{ "FOOTER.TERMS_LINK" | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-grid__item">
+                <div class="c-section">
+                    <h6 class="c-section__title s-color-white">
+                        {{ "FOOTER.SECTIONS.CONTACT_US" | translate }}
+                        <span class="c-section__title-decoration"></span>
+                    </h6>
+                    <ul class="c-list">
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/contact']"
+                            >
+                                {{ "FOOTER.EMAIL_LINK" | translate }}
+                            </a>
+                        </li>
+                        <li class="c-list__item">
+                            <a
+                                class="c-link c-link--clear"
+                                [routerLink]="['/faq']"
+                            >
+                                {{ "FOOTER.FAQ_LINK" | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="l-grid__item">
-        <div class="c-section">
-          <h6 class="c-section__title s-color-white">
-            {{ "FOOTER.SECTIONS.ABOUT_US" | translate }}
-            <span class="c-section__title-decoration"></span>
-          </h6>
-          <ul class="c-list">
-            <li class="c-list__item">
-              <a class="c-link c-link--clear" [routerLink]="['/about']">
-                {{ "FOOTER.ABOUT_LINK" | translate }}
-              </a>
-            </li>
-            <li class="c-list__item">
-              <a class="c-link c-link--clear" [routerLink]="['/terms/tos']">
-                {{ "FOOTER.TERMS_LINK" | translate }}
-              </a>
-            </li>
-          </ul>
+
+        <div class="e-logo u-align-v-right">
+            <img src="./assets/images/logo-white.png">
+            <div class="e-social">
+                <a
+                    href="#"
+                    class="e-link-social"
+                >
+                    <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+                </a>
+                <a
+                    href="#"
+                    class="e-link-social"
+                >
+                    <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                </a>
+                <a
+                    href="#"
+                    class="e-link-social"
+                >
+                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="l-grid__item">
-        <div class="c-section">
-          <h6 class="c-section__title s-color-white">
-            {{ "FOOTER.SECTIONS.CONTACT_US" | translate }}
-            <span class="c-section__title-decoration"></span>
-          </h6>
-          <ul class="c-list">
-            <li class="c-list__item">
-              <a class="c-link c-link--clear" [routerLink]="['/contact']">
-                {{ "FOOTER.EMAIL_LINK" | translate }}
-              </a>
-            </li>
-            <li class="c-list__item">
-              <a class="c-link c-link--clear" [routerLink]="['/faq']">
-                {{ "FOOTER.FAQ_LINK" | translate }}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
 
-    <div class="e-logo u-align-v-right">
-      <img src="./assets/images/logo.png" />
-      <div class="e-social">
-        <a href="#" class="e-link-social">
-          <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
-        </a>
-        <a href="#" class="e-link-social">
-          <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
-        </a>
-        <a href="#" class="e-link-social">
-          <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="l-container e-copyright">
-    {{ "FOOTER.COPYRIGHT" | translate }}
-  </div>
+    <div class="l-container e-copyright">{{ "FOOTER.COPYRIGHT" | translate }}</div>
 </header>

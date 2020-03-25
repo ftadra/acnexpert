@@ -30,6 +30,11 @@
   justify-content: center;
 }
 
+// FONT
+.u-text-align-center {
+  text-align: center;
+}
+
 // WIDTH
 .u-width--10 {
   width: 10%;
@@ -98,81 +103,81 @@
 
 // MARGIN
 .u-margin-left-half {
-  margin-left: $size-half;
+  margin-left: $size-half !important;
 }
 
 .u-margin-left {
-  margin-left: $size-one;
+  margin-left: $size-one !important;
 }
 
 .u-margin-left-double {
-  margin-left: $size-double;
+  margin-left: $size-double !important;
 }
 
 .u-margin-left-quad {
-  margin-left: $size-quad;
+  margin-left: $size-quad !important;
 }
 
 .u-margin-right-half {
-  margin-right: $size-half;
+  margin-right: $size-half !important;
 }
 
 .u-margin-right {
-  margin-right: $size-one;
+  margin-right: $size-one !important;
 }
 
 .u-margin-right-double {
-  margin-right: $size-double;
+  margin-right: $size-double !important;
 }
 
 .u-margin-right-quad {
-  margin-right: $size-quad;
+  margin-right: $size-quad !important;
 }
 
 .u-margin-top-half {
-  margin-top: $size-half;
+  margin-top: $size-half !important;
 }
 
 .u-margin-top {
-  margin-top: $size-one;
+  margin-top: $size-one !important;
 }
 
 .u-margin-top-double {
-  margin-top: $size-double;
+  margin-top: $size-double !important;
 }
 
 .u-margin-top-quad {
-  margin-top: $size-quad;
+  margin-top: $size-quad !important;
 }
 
 .u-margin-top-large {
-  margin-top: 100px;
+  margin-top: 100px !important;
 }
 
 .u-margin-top-med {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 
 .u-margin-bottom-half {
-  margin-bottom: $size-half;
+  margin-bottom: $size-half !important;
 }
 
 .u-margin-bottom {
-  margin-bottom: $size-one;
+  margin-bottom: $size-one !important;
 }
 
 .u-margin-bottom-double {
-  margin-bottom: $size-double;
+  margin-bottom: $size-double !important;
 }
 
 .u-margin-bottom-quad {
-  margin-bottom: $size-quad;
+  margin-bottom: $size-quad !important;
 }
 
 .u-margin-bottom-large {
-  margin-bottom: 100px;
+  margin-bottom: 100px !important;
 }
 
 .u-margin-bottom-med {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }

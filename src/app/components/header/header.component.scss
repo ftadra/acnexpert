@@ -2,7 +2,7 @@
 
 .e-header {
   background: $white;
-  height: 80px;
+  height: 92px;
 
   &--inverted {
     background: transparent;
@@ -19,7 +19,7 @@
   .e-logo {
     img {
       margin-top: 10px;
-      height: 36px;
+      height: 32px;
     }
   }
 
@@ -29,10 +29,20 @@
     li {
       margin: 0 15px;
       list-style: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
   .c-link {
+    color: $gray--900;
+    font-size: 0.9rem;
     font-weight: 500;
+  }
+
+  .c-btn {
+    font-size: 0.9rem;
   }
 }

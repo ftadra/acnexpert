@@ -1,0 +1,28 @@
+<app-common-page-header
+  [title]="'ABOUT.TITLE' | translate"
+  [description]="'ABOUT.DESCRIPTION' | translate"
+>
+</app-common-page-header>
+
+<div class="e-about l-container u-flex-align-center u-margin-top-large">
+  <div class="e-about__story l-grid l-grid--c2">
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-13.svg" />
+    </div>
+    <div class="l-grid__item e-about__story-description">
+      <div class="l-linelength l-linelength--xs">
+        <h4>{{ "ABOUT.STORY.TITLE" | translate }}</h4>
+        <p>{{ "ABOUT.STORY.DESCRIPTION" | translate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="u-margin-top-large u-margin-bottom-large" />
+
+  <div class="e-about__mission l-linelength l-linelength--small">
+    <h4>{{ "ABOUT.MISSION.TITLE" | translate }}</h4>
+    <p>{{ "ABOUT.MISSION.DESCRIPTION" | translate }}</p>
+  </div>
+</div>
+
+<app-learn-more-footer></app-learn-more-footer>
