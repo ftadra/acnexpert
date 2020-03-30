@@ -12,7 +12,6 @@
 .l-grid {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   margin: 0 -1rem;
 
   &--c2 {
@@ -59,5 +58,9 @@
 
   &--large {
     max-width: 44rem;
+  }
+
+  &--xl {
+    max-width: 60rem;
   }
 }

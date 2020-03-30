@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-advantages',
+  // tslint:disable-next-line: component-selector
+  selector: 'home-advantages',
   templateUrl: './advantages.component.html',
   styleUrls: ['./advantages.component.scss']
 })
-export class AdvantagesComponent implements OnInit {
+export class HomeAdvantagesComponent implements OnInit {
   public currentIndex = 1;
   public images = {
     1: '../../../../../assets/images/Illustration-7.svg',

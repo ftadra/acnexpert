@@ -68,12 +68,6 @@
       "TITLE": "Being online means \n no more in-person appointments",
       "DESCRIPTION": "Forget back-and-forth phone calls, long periods in the waiting room, and trying to find parking. You’ll be treated right at home. We’ll even deliver your prescription to your favorite pharmacy.",
       "FACIAL_ACNE": "Facial acne",
-      "PRICING_TITLE_1": "First Consultation",
-      "PRICING_VALUE_1": "$59",
-      "PRICING_TITLE_2": "Monthly Treatment",
-      "PRICING_VALUE_2": "$99",
-      "PRICING_TITLE_3": "Medication",
-      "PRICING_VALUE_3": "Not Included",
       "INSURANCE_COVERED": "Usually covered by insurance. Meaning you’ll only pay a small copay at the pharmacy.",
       "LEARN_MORE_CTA": "Learn More"
     },
@@ -109,6 +103,17 @@
     "LIST_4": "FDA approved since 1982 for acne treatment.",
     "LIST_5": "Comes in the form of a pill, not a cream"
   },
+  "PRICE": {
+    "PRICING_TITLE_1": "First Consultation",
+    "PRICING_DESCRIPTION_1": "We’ll assess your acne and develop a custom treatment plan.",
+    "PRICING_VALUE_1": "$59",
+    "PRICING_TITLE_2": "Monthly Treatment",
+    "PRICING_DESCRIPTION_2": "One course of Accutane is usually five to six months.",
+    "PRICING_VALUE_2": "$99",
+    "PRICING_TITLE_3": "Medication",
+    "PRICING_DESCRIPTION_3": "Usually covered by insurance, meaning you’ll only pay a small copay at the pharmacy.",
+    "PRICING_VALUE_3": "Not Included"
+  },
   "ABOUT": {
     "TITLE": "About AcneXpert",
     "DESCRIPTION": "It’s nice to meet you. Let us introduce ourselves.",
@@ -132,5 +137,63 @@
       "TITLE": "Why Accutane?"
     },
     "FAQ": "Frequently Asked Questions"
+  },
+  "PRICING": {
+    "TITLE": "Pricing",
+    "DESCRIPTION": "You’ll be paying for the medical services you receive, not for our landlords. You’d need to see a doctor once a month anyway \n — why not cut out all the traffic and waiting around?",
+    "STORY": {
+      "TITLE": "Get treated at home and wave goodbye to stress.",
+      "DESCRIPTION": "The amount you’ll see your doctor won’t change, but the amount of time you spend somewhere you’re comfortable will increase significantly. AcneXpert isn’t just more convenient, it’s more affordable too. \n\n If for any reason you don’t want to continue being treated by us, we’ll refund the entire cost of your first consultation. \n No questions asked."
+    }
+  },
+  "CREATE_ACCOUNT": {
+    "TITLE": "Let’s get your account ready",
+    "DESCRIPTION": "This form is the first step on your path to freedom from acne. It should take around five minutes to complete. The privacy of your data is of the highest priority to us, and we can guarantee it’ll be handled accordingly, in accordance with HIPAA as well as other privacy standards.",
+    "ACCOUNT_TITLE": "Account",
+    "ABOUT_YOU_TITLE": "About you",
+    "PHARMACY_TITLE": "Pharmacy information",
+    "PHARMACY_DESCRIPTION": "We’ll send your prescription directly to your favorite pharmacy.",
+    "TERMS_TEXT": "I have read and accepted the",
+    "TERMS_LINK": "terms and conditions",
+    "PRIVACY_LINK": "privacy terms",
+    "CREATE_ACCOUNT_BUTTON": "Create Account",
+    "IPLEDGE_TOOLTIP": "We need this to identify you with ipledge and your pharmacy."
+  },
+  "FIELDS": {
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "john.doe@gmail.com",
+    "PASSWORD": "Password",
+    "PASSWORD_PLACEHOLDER": "",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "",
+    "NAME": "Name",
+    "NAME_PLACEHOLDER": "Doe, John IV",
+    "BIRTHDAY": "Birthday",
+    "BIRTHDAY_PLACEHOLDER": "02/13/1993",
+    "GENDER": "Gender",
+    "GENDER_PLACEHOLDER": "",
+    "WEIGHT": "Weight",
+    "WEIGHT_PLACEHOLDER": "190",
+    "ADDRESS": "Address",
+    "ADDRESS_PLACEHOLDER": "108-7 Queens Blvd, Forest Hills, NY 11375, United States",
+    "STATE": "State",
+    "STATE_PLACEHOLDER": "",
+    "PHONE": "Phone Number",
+    "PHONE_PLACEHOLDER": "+1 999 999 9999",
+    "PHARMACY_NAME": "Pharmacy Name",
+    "PHARMACY_NAME_PLACEHOLDER": "CVS",
+    "PHARMACY_ADDRESS": "Pharmacy Address",
+    "PHARMACY_ADDRESS_PLACEHOLDER": "108-7 Queens Blvd, Forest Hills, NY 11375, United States",
+    "SOCIAL_SECURITY": "Social Security No",
+    "SOCIAL_SECURITY_PLACEHOLDER": "Last 4 numbers"
+  },
+  "CLINICAL_DETAILS": {
+    "TITLE": "Nice to meet you, Felipe",
+    "DESCRIPTION": "In order to customize your treatment plan, we’ll need a few clinical details. Don’t worry too much if you miss something — we’ll be following up on the phone to ensure nothing slips through the cracks.",
+    "NEXT_BUTTON": "Next"
+  },
+  "GENERAL": {
+    "YES": "Yes",
+    "NO": "No"
   }
 }

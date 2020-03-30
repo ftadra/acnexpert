@@ -1,0 +1,149 @@
+<div class="c-field__title">{{ title }}</div>
+<div class="c-field__body" [ngSwitch]="type">
+  <div *ngSwitchCase="'text'">
+    <input
+      type="text"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
+  </div>
+
+  <div *ngSwitchCase="'password'">
+    <input
+      type="password"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
+  </div>
+
+  <div *ngSwitchCase="'email'">
+    <input
+      type="email"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+      email
+    />
+  </div>
+
+  <div *ngSwitchCase="'select'">
+    <select [(ngModel)]="value" (ngModelChange)="updateChanges()">
+      <option *ngFor="let opt of options" [value]="opt">
+        {{ opt }}
+      </option>
+    </select>
+  </div>
+
+  <div *ngSwitchCase="'date'">
+    <my-date-picker
+      [options]="dateOptions"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    ></my-date-picker>
+  </div>
+
+  <div *ngSwitchCase="'phone'">
+    <input
+      type="phone"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+      phone
+    />
+  </div>
+
+  <div *ngSwitchCase="'number'">
+    <input
+      type="number"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
+  </div>
+
+  <div *ngSwitchCase="'textarea'">
+    <textarea
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      rows="3"
+      (ngModelChange)="updateChanges()"
+    ></textarea>
+  </div>
+
+  <div *ngSwitchCase="'boolean'">
+    <div class="c-boolean">
+      <input
+        class="c-boolean__input"
+        type="radio"
+        [name]="key"
+        [id]="key + '-true'"
+        [value]="true"
+        [(ngModel)]="value"
+        (ngModelChange)="updateChanges()"
+      />
+      <label class="c-boolean__item" [for]="key + '-true'">
+        <span>{{ "GENERAL.YES" | translate }}</span>
+      </label>
+
+      <input
+        class="c-boolean__input"
+        type="radio"
+        [name]="key"
+        [id]="key + '-false'"
+        [value]="false"
+        [(ngModel)]="value"
+        (ngModelChange)="updateChanges()"
+      />
+      <label class="c-boolean__item" [for]="key + '-false'">
+        {{ "GENERAL.NO" | translate }}
+      </label>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'multi'">
+    <div class="c-multi">
+      <div *ngFor="let option of options; let index = index">
+        <input
+          class="c-multi__input"
+          type="checkbox"
+          [name]="key"
+          [id]="key + '-' + index"
+          [(ngModel)]="_checked[index]"
+          (ngModelChange)="setCheckedValues()"
+        />
+        <label class="c-multi__item" [for]="key + '-' + index">
+          <fa-icon
+            class="c-multi__icon c-multi__icon--checked"
+            [icon]="['fas', 'check-square']"
+          ></fa-icon>
+          <fa-icon
+            class="c-multi__icon c-multi__icon--unchecked"
+            [icon]="['far', 'square']"
+          ></fa-icon>
+          <span>{{ option }}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'score'">
+    <div class="c-score">
+      <div *ngFor="let score of _scores; let index = index">
+        <input
+          class="c-score__input"
+          type="radio"
+          [name]="key"
+          [id]="key + '-' + (index + 1)"
+          [value]="index + 1"
+          [(ngModel)]="value"
+          (ngModelChange)="updateChanges()"
+        />
+        <label class="c-score__item" [for]="key + '-' + (index + 1)">
+          <span>{{ index + 1 }}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c-field__description">{{ description }}</div>

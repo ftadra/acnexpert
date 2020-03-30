@@ -7,6 +7,10 @@ hr {
   margin: 0 auto;
   background-color: $gray--300;
   border: 0;
+
+  &.hr--full {
+    width: 100%;
+  }
 }
 
 .c-v-separator {
@@ -20,6 +24,8 @@ hr {
   padding: $size-half $size-one-half;
   border-radius: $size-double;
   background: $primary--500;
+  border: 0;
+  appearance: none;
 
   color: $white;
   font-size: 0.9rem;
@@ -88,8 +94,8 @@ hr {
 .c-section {
   &__title {
     margin: 0;
-    margin-bottom: $size-one;
-    font-size: 1.2rem;
+    margin-bottom: $size-one-half;
+    font-size: 1.4rem;
   }
 
   &__title-decoration {
@@ -98,5 +104,167 @@ hr {
     height: 4px;
     margin-top: $size-half;
     background: $primary--500;
+  }
+
+  &__description {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.c-field {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: $size-one;
+
+  &.ng-invalid.ng-dirty {
+    input,
+    textarea,
+    select {
+      border-color: $red-error;
+    }
+  }
+
+  &__title {
+    margin-bottom: $size-half;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  &__body {
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: $size-tq;
+      background: $white;
+      border: 1px solid $gray--300;
+      border-radius: 3px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    select {
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat, repeat;
+      background-position: right 0.7em top 50%, 0 0;
+      background-size: 0.65em auto, 100%;
+    }
+  }
+}
+
+.c-label {
+  display: block;
+  margin-bottom: $size-one;
+}
+
+.c-boolean {
+  display: flex;
+  width: 8rem;
+  border: 1px solid $gray--300;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  overflow: hidden;
+
+  &__input {
+    display: none;
+
+    &:checked + .c-boolean__item {
+      background-color: $primary--500;
+      color: white;
+    }
+  }
+
+  &__item {
+    width: 50%;
+    padding: $size-half $size-tq;
+    border-right: 1px solid $gray--300;
+    cursor: pointer;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.c-multi {
+  font-size: 0.95rem;
+  overflow: hidden;
+
+  &__input {
+    display: none;
+
+    &:checked + .c-multi__item {
+      background-color: $primary--500;
+      color: white;
+
+      .c-multi__icon--checked {
+        display: block;
+      }
+      .c-multi__icon--unchecked {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid $gray--300;
+    border-radius: 3px;
+    padding: $size-tq;
+    margin-bottom: $size-half;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: $size-one;
+
+    &--checked {
+      display: none;
+    }
+  }
+}
+
+.c-score {
+  display: flex;
+  border: 1px solid $gray--300;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  overflow: hidden;
+
+  > div {
+    display: inline-block;
+    flex: 1;
+
+    &:last-child {
+      .c-score__item {
+        border-right: 0;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .c-score__item {
+      background-color: $primary--500;
+      color: white;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    border-right: 1px solid $gray--300;
+    padding: $size-half $size-tq;
+    text-align: center;
+    cursor: pointer;
   }
 }

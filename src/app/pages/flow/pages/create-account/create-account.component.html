@@ -1,0 +1,196 @@
+<app-flow-page-header
+  [title]="'CREATE_ACCOUNT.TITLE' | translate"
+  [description]="'CREATE_ACCOUNT.DESCRIPTION' | translate"
+>
+</app-flow-page-header>
+
+<div
+  class="c-form l-container l-linelength l-linelength--xl u-margin-top-double"
+>
+  <div class="l-grid l-grid--c2">
+    <div class="l-grid__item">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="c-section u-margin-bottom-double">
+          <h3 class="c-section__title">
+            <span>
+              {{ "CREATE_ACCOUNT.ACCOUNT_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <app-field
+              [title]="'FIELDS.EMAIL' | translate"
+              [placeholder]="'FIELDS.EMAIL_PLACEHOLDER' | translate"
+              type="email"
+              formControlName="email"
+            ></app-field>
+
+            <div class="l-grid l-grid--c2">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.PASSWORD' | translate"
+                  type="password"
+                  formControlName="password"
+                ></app-field>
+              </div>
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.CONFIRM_PASSWORD' | translate"
+                  type="password"
+                  formControlName="confirm_password"
+                ></app-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section u-margin-bottom-double">
+          <h3 class="c-section__title">
+            <span>
+              {{ "CREATE_ACCOUNT.ABOUT_YOU_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <app-field
+              [title]="'FIELDS.NAME' | translate"
+              [placeholder]="'FIELDS.NAME_PLACEHOLDER' | translate"
+              type="text"
+              formControlName="name"
+            ></app-field>
+
+            <div class="l-grid l-grid--c3">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.BIRTHDAY' | translate"
+                  [placeholder]="'FIELDS.BIRTHDAY_PLACEHOLDER' | translate"
+                  type="date"
+                  formControlName="birthday"
+                ></app-field>
+              </div>
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.GENDER' | translate"
+                  [options]="genderOptions"
+                  type="select"
+                  formControlName="gender"
+                ></app-field>
+              </div>
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.WEIGHT' | translate"
+                  [placeholder]="'FIELDS.WEIGHT_PLACEHOLDER' | translate"
+                  type="text"
+                  formControlName="weight"
+                >
+                </app-field>
+              </div>
+            </div>
+
+            <app-field
+              [title]="'FIELDS.ADDRESS' | translate"
+              [placeholder]="'FIELDS.ADDRESS_PLACEHOLDER' | translate"
+              type="text"
+              formControlName="address"
+            ></app-field>
+
+            <div class="l-grid l-grid--c2">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.STATE' | translate"
+                  [options]="stateOptions"
+                  type="select"
+                  formControlName="state"
+                ></app-field>
+              </div>
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.PHONE' | translate"
+                  [placeholder]="'FIELDS.PHONE_PLACEHOLDER' | translate"
+                  type="phone"
+                  formControlName="phone"
+                ></app-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <h3 class="c-section__title">
+            <span>
+              {{ "CREATE_ACCOUNT.PHARMACY_TITLE" | translate }}
+            </span>
+            <span class="c-section__description">
+              {{ "CREATE_ACCOUNT.PHARMACY_DESCRIPTION" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <div class="l-grid l-grid--c2">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.PHARMACY_NAME' | translate"
+                  [placeholder]="'FIELDS.PHARMACY_NAME_PLACEHOLDER' | translate"
+                  type="text"
+                  formControlName="pharmacy_name"
+                ></app-field>
+              </div>
+            </div>
+
+            <app-field
+              [title]="'FIELDS.PHARMACY_ADDRESS' | translate"
+              [placeholder]="'FIELDS.PHARMACY_ADDRESS' | translate"
+              type="text"
+              formControlName="pharmacy_address"
+            ></app-field>
+
+            <div class="l-grid l-grid--c3">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.SOCIAL_SECURITY' | translate"
+                  [placeholder]="
+                    'FIELDS.SOCIAL_SECURITY_PLACEHOLDER' | translate
+                  "
+                  type="number"
+                  formControlName="social_security"
+                >
+                </app-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr--full u-margin-bottom-double" />
+
+        <label class="c-label">
+          <input type="checkbox" />
+          <span>
+            {{ "CREATE_ACCOUNT.TERMS_TEXT" | translate }}
+          </span>
+          <a class="c-link">
+            {{ "CREATE_ACCOUNT.TERMS_LINK" | translate }}
+          </a>
+        </label>
+
+        <label class="c-label">
+          <input type="checkbox" />
+          <span>
+            {{ "CREATE_ACCOUNT.TERMS_TEXT" | translate }}
+          </span>
+          <a class="c-link">
+            {{ "CREATE_ACCOUNT.PRIVACY_LINK" | translate }}
+          </a>
+        </label>
+
+        <div>
+          <button class="c-btn c-btn--large u-margin-top-double" type="submit">
+            {{ "CREATE_ACCOUNT.CREATE_ACCOUNT_BUTTON" | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-16.svg" />
+    </div>
+  </div>
+</div>

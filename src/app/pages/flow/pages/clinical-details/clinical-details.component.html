@@ -1,0 +1,50 @@
+<app-flow-page-header
+  [title]="'CLINICAL_DETAILS.TITLE' | translate"
+  [description]="'CLINICAL_DETAILS.DESCRIPTION' | translate"
+>
+</app-flow-page-header>
+
+<div
+  class="c-form l-container l-linelength l-linelength--xl u-margin-top-double"
+>
+  <div class="l-grid l-grid--c2">
+    <div class="l-grid__item">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div
+          class="c-section u-margin-bottom-double"
+          *ngFor="let group of fields"
+        >
+          <h3 class="c-section__title">
+            <span>
+              {{ group.label }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <app-field
+              *ngFor="let field of group.content"
+              [key]="field.key"
+              [title]="field.label"
+              [placeholder]="field.desc"
+              [type]="field.type"
+              [formControlName]="field.key"
+              [options]="field.choices"
+            >
+            </app-field>
+          </div>
+        </div>
+
+        <hr class="hr--full u-margin-bottom-double" />
+
+        <div>
+          <button class="c-btn c-btn--large u-margin-top-double" type="submit">
+            {{ "CLINICAL_DETAILS.NEXT_BUTTON" | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-16.svg" />
+    </div>
+  </div>
+</div>

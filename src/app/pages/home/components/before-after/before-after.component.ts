@@ -3,11 +3,12 @@ import { BeforeAfterItem } from '../../../../interfaces/before-after.interface';
 import { MOCK_BEFORE_AFTER } from '../../../../mock/before-after.mock';
 
 @Component({
-  selector: 'app-before-after',
+  // tslint:disable-next-line: component-selector
+  selector: 'home-before-after',
   templateUrl: './before-after.component.html',
   styleUrls: ['./before-after.component.scss']
 })
-export class BeforeAfterComponent implements OnInit {
+export class HomeBeforeAfterComponent implements OnInit {
   public currentIndex = 0;
   public data: BeforeAfterItem[] = MOCK_BEFORE_AFTER;
 

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-why-accutane',
+  // tslint:disable-next-line: component-selector
+  selector: 'home-why-accutane',
   templateUrl: './why-accutane.component.html',
   styleUrls: ['./why-accutane.component.scss']
 })
-export class WhyAccutaneComponent implements OnInit {
+export class HomeWhyAccutaneComponent implements OnInit {
 
   constructor() { }
 

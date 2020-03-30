@@ -17,4 +17,4 @@ export const MOCK_BEFORE_AFTER: BeforeAfterItem[] = [
       dosage: '40mg twice a day'
     }
   }
-]
+];

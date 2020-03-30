@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhyAccutaneComponent } from './why-accutane.component';
+import { HomeWhyAccutaneComponent } from './why-accutane.component';
 
-describe('WhyAccutaneComponent', () => {
-  let component: WhyAccutaneComponent;
-  let fixture: ComponentFixture<WhyAccutaneComponent>;
+describe('HomeWhyAccutaneComponent', () => {
+  let component: HomeWhyAccutaneComponent;
+  let fixture: ComponentFixture<HomeWhyAccutaneComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhyAccutaneComponent ]
+      declarations: [HomeWhyAccutaneComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhyAccutaneComponent);
+    fixture = TestBed.createComponent(HomeWhyAccutaneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

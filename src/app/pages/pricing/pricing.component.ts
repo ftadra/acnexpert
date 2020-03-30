@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line: component-selector
-  selector: 'home-pricing',
+  selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss']
 })
-export class HomePricingComponent implements OnInit {
+export class PricingComponent implements OnInit {
 
   constructor() { }
 

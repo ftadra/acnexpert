@@ -1,0 +1,40 @@
+<app-common-page-header
+  [title]="'PRICING.TITLE' | translate"
+  [description]="'PRICING.DESCRIPTION' | translate"
+>
+</app-common-page-header>
+
+<div class="e-pricing l-container u-flex-align-center u-margin-top-large">
+  <div class="e-pricing__story l-grid l-grid--c2">
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-15.svg" />
+    </div>
+    <div class="l-grid__item e-pricing__story-description">
+      <div class="l-linelength l-linelength--xs">
+        <h4>{{ "PRICING.STORY.TITLE" | translate }}</h4>
+        <p>{{ "PRICING.STORY.DESCRIPTION" | translate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-pricing__overview l-grid l-grid--c3">
+    <div class="l-grid__item">
+      <fa-icon [icon]="['fas', 'stethoscope']"></fa-icon>
+      <h6>
+        {{ "PRICE.PRICING_TITLE_1" | translate }}
+      </h6>
+      <p>
+        {{ "PRICE.PRICING_DESCRIPTION_1" | translate }}
+      </p>
+      <span class="e-pricing__price">
+        {{ "PRICE.PRICING_VALUE_1" | translate }}
+      </span>
+    </div>
+    <div class="l-grid__item"></div>
+    <div class="l-grid__item"></div>
+  </div>
+</div>
+
+<hr class="u-margin-top-large u-margin-bottom-large" />
+
+<app-register-cta></app-register-cta>

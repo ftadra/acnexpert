@@ -1,0 +1,12 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-flow-page-header {
+  min-height: 270px;
+  padding: $size-double 0;
+  background: $primary--100;
+
+  .l-container {
+    align-items: center;
+  }
+}
