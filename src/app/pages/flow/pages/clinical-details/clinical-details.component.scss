@@ -1,0 +1,15 @@
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-clinical-details {
+  &__scroll-image {
+    margin-top: 84rem;
+  }
+
+  &__scroll-text {
+    width: 16rem;
+    margin: 0 auto;
+    margin-top: $size-double;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}

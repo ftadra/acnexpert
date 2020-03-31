@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MyDatePickerModule } from 'mydatepicker';
+import { CreditCardDirectivesModule } from 'angular-cc-library';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -36,6 +37,11 @@ import { FlowPageHeaderComponent } from './pages/flow/components/flow-page-heade
 import { FieldComponent } from './components/field/field.component';
 import { PhoneMaskDirective } from './directives/phone-mask.directive';
 import { ClinicalDetailsComponent } from './pages/flow/pages/clinical-details/clinical-details.component';
+import { BillingComponent } from './pages/flow/pages/billing/billing.component';
+import { PhotosComponent } from './pages/flow/pages/photos/photos.component';
+import { ThanksComponent } from './pages/flow/pages/thanks/thanks.component';
+import { CompleteComponent } from './pages/flow/pages/complete/complete.component';
+import { DndDirective } from './directives/drag-and-drop.directive';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -65,13 +71,19 @@ export function HttpLoaderFactory(http: HttpClient) {
     FlowPageHeaderComponent,
     FieldComponent,
     PhoneMaskDirective,
-    ClinicalDetailsComponent
+    ClinicalDetailsComponent,
+    BillingComponent,
+    PhotosComponent,
+    ThanksComponent,
+    CompleteComponent,
+    DndDirective
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     MyDatePickerModule,
+    CreditCardDirectivesModule,
     FormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',

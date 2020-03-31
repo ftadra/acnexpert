@@ -7,6 +7,10 @@ import { AccutaneComponent } from './pages/accutane/accutane.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { CreateAccountComponent } from './pages/flow/pages/create-account/create-account.component';
 import { ClinicalDetailsComponent } from './pages/flow/pages/clinical-details/clinical-details.component';
+import { BillingComponent } from './pages/flow/pages/billing/billing.component';
+import { PhotosComponent } from './pages/flow/pages/photos/photos.component';
+import { ThanksComponent } from './pages/flow/pages/thanks/thanks.component';
+import { CompleteComponent } from './pages/flow/pages/complete/complete.component';
 
 
 const routes: Routes = [
@@ -25,7 +29,11 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'create', pathMatch: 'full' },
       { path: 'create', component: CreateAccountComponent },
-      { path: 'clinical', component: ClinicalDetailsComponent }
+      { path: 'clinical', component: ClinicalDetailsComponent },
+      { path: 'billing', component: BillingComponent },
+      { path: 'photos', component: PhotosComponent },
+      { path: 'thanks', component: ThanksComponent },
+      { path: 'complete', component: CompleteComponent }
     ]
   },
 ];

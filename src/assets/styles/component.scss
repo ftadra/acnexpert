@@ -153,6 +153,48 @@ hr {
       background-size: 0.65em auto, 100%;
     }
   }
+
+  &__file {
+    input {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      padding: $size-one $size-one-half;
+      border: 1px solid $gray--300;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $primary--500;
+      }
+
+      &.c-field__file--dnd {
+        border-color: $primary--500;
+        background: $primary--100;
+      }
+
+      img {
+        margin-right: $size-one-half;
+      }
+
+      h6,
+      p {
+        margin: 0;
+      }
+
+      p {
+        color: $gray--600;
+      }
+    }
+
+    &-attached-icon {
+      display: inline-block;
+      color: $primary--500;
+      transform: translateY(2px);
+    }
+  }
 }
 
 .c-label {

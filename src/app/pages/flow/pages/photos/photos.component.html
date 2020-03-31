@@ -1,0 +1,112 @@
+<app-flow-page-header
+  [title]="'PHOTOS.TITLE' | translate"
+  [description]="'PHOTOS.DESCRIPTION' | translate"
+>
+</app-flow-page-header>
+
+<div class="l-container l-linelength l-linelength--xl u-margin-top-double">
+  <div class="l-grid l-grid--c2">
+    <div class="l-grid__item">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="c-section u-margin-bottom-double">
+          <h3 class="c-section__title">
+            <span>
+              {{ "PHOTOS.PATIENT_ID_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+
+          <div class="c-section__body">
+            <p class=" u-margin-bottom-double">
+              {{ "PHOTOS.PATIENT_ID_DESCRIPTION" | translate }}
+            </p>
+
+            <app-field
+              [title]="'FIELDS.PHOTO_ID' | translate"
+              type="file"
+              icon="id"
+              key="photo_id"
+              formControlName="photo_id"
+            ></app-field>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <h3 class="c-section__title">
+            <span>
+              {{ "PHOTOS.ACNE_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <p class=" u-margin-bottom-double">
+              {{ "PHOTOS.ACNE_DESCRIPTION" | translate }}
+            </p>
+
+            <app-field
+              [title]="'FIELDS.PHOTO_PATIENT_LEFT' | translate"
+              type="file"
+              icon="left"
+              key="photo_left"
+              formControlName="photo_left"
+            >
+            </app-field>
+
+            <app-field
+              [title]="'FIELDS.PHOTO_PATIENT_RIGHT' | translate"
+              type="file"
+              icon="right"
+              key="photo_right"
+              formControlName="photo_right"
+            >
+            </app-field
+            ><app-field
+              [title]="'FIELDS.PHOTO_PATIENT_FRONT' | translate"
+              type="file"
+              icon="front"
+              key="photo_front"
+              formControlName="photo_front"
+            >
+            </app-field>
+
+            <h6 class="u-margin-top-double">
+              {{ "PHOTOS.OPTIONAL_TITLE" | translate }}
+            </h6>
+            <p class=" u-margin-bottom-double">
+              {{ "PHOTOS.OPTIONAL_DESCRIPTION" | translate }}
+            </p>
+
+            <app-field
+              [title]="'FIELDS.PHOTO_PATIENT_CHEST' | translate"
+              type="file"
+              icon="chest"
+              key="photo_chest"
+              formControlName="photo_chest"
+            >
+            </app-field>
+
+            <app-field
+              [title]="'FIELDS.PHOTO_PATIENT_BACK' | translate"
+              type="file"
+              icon="back"
+              key="photo_back"
+              formControlName="photo_back"
+            >
+            </app-field>
+          </div>
+        </div>
+
+        <hr class="hr--full u-margin-top-double u-margin-bottom-double" />
+
+        <div>
+          <button class="c-btn c-btn--large" type="submit">
+            {{ "GENERAL.NEXT" | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-20.svg" />
+    </div>
+  </div>
+</div>

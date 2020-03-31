@@ -20,9 +20,11 @@ export class FieldComponent implements ControlValueAccessor, OnInit {
   @Input() key = '';
   @Input() title = '';
   @Input() placeholder = '';
-  @Input() type: 'text' | 'boolean' | 'date' | 'email' | 'multi' | 'password' | 'phone' | 'score' | 'select' | 'textarea' = 'text';
+  // tslint:disable-next-line: max-line-length
+  @Input() type: 'text' | 'boolean' | 'date' | 'email' | 'file' | 'multi' | 'password' | 'phone' | 'score' | 'select' | 'card' | 'cvc' | 'exp' | 'textarea' = 'text';
   @Input() description = '';
   @Input() options = [];
+  @Input() icon: 'front' | 'back' | 'chest' | 'id' | 'left' | 'right' = null;
 
   value: any;
 
@@ -60,6 +62,11 @@ export class FieldComponent implements ControlValueAccessor, OnInit {
 
   // basic
   updateChanges() {
+    this.onChange(this.value);
+  }
+
+  updateFileChanges(files: FileList) {
+    this.value = files.item(0);
     this.onChange(this.value);
   }
 

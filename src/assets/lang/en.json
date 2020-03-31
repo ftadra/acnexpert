@@ -185,15 +185,85 @@
     "PHARMACY_ADDRESS": "Pharmacy Address",
     "PHARMACY_ADDRESS_PLACEHOLDER": "108-7 Queens Blvd, Forest Hills, NY 11375, United States",
     "SOCIAL_SECURITY": "Social Security No",
-    "SOCIAL_SECURITY_PLACEHOLDER": "Last 4 numbers"
+    "SOCIAL_SECURITY_PLACEHOLDER": "Last 4 numbers",
+    "CARD_HOLDER_NAME": "Cardholder's Full Name",
+    "CARD_HOLDER_NAME_PLACEHOLDER": "John Doe III",
+    "CARD_NUMBER": "Card Number",
+    "CARD_NUMBER_PLACEHOLDER": "1234 0000 0000 4321",
+    "EXP_DATE": "Exp Date",
+    "EXP_DATE_PLACEHOLDER": "13/2025",
+    "SECURITY_CODE": "Security Code",
+    "SECURITY_CODE_PLACEHOLDER": "123",
+    "BILLING_ADDRESS": "Billing Address",
+    "BILLING_ADDRESS_PLACEHOLDER": "108-7 Queens Blvd, Forest Hills, NY 11375, United States",
+    "ZIP_CODE": "Zip Code",
+    "PHOTO_PLACEHOLDER": "Click or drag and drop to attach an image.",
+    "PHOTO_ATTACHED": " attached...",
+    "PHOTO_ID": "Photo ID",
+    "PHOTO_PATIENT_RIGHT": "Patient’s Right Face",
+    "PHOTO_PATIENT_LEFT": "Patient’s Left Face",
+    "PHOTO_PATIENT_FRONT": "Patient’s Front Face",
+    "PHOTO_PATIENT_BACK": "Patient’s Back",
+    "PHOTO_PATIENT_CHEST": "Patient’s Chest"
   },
   "CLINICAL_DETAILS": {
     "TITLE": "Nice to meet you, Felipe",
     "DESCRIPTION": "In order to customize your treatment plan, we’ll need a few clinical details. Don’t worry too much if you miss something — we’ll be following up on the phone to ensure nothing slips through the cracks.",
-    "NEXT_BUTTON": "Next"
+    "SCROLL_MESSAGE": "We know these forms can be annoying, but you’re nearly there. Keep it up!"
   },
   "GENERAL": {
     "YES": "Yes",
-    "NO": "No"
+    "NO": "No",
+    "NEXT": "Next",
+    "SAVE": "Save"
+  },
+  "BILLING": {
+    "TITLE": "Payment Details",
+    "DESCRIPTION": "You’ll need to add your payment details. \nDon’t worry, we’ll only charge after your first consultation.",
+    "PRICING_TITLE": "Pricing",
+    "PRICING_DESCRIPTION": "Thanks for completing your profile. We’ll need your payment details to schedule your first consultation. If you choose not to stay with us, we’ll refund the entire cost of your first visit. No fine print. No questions asked.",
+    "WHY_TITLE": "Why AcneXpert?",
+    "PAYMENT_TITLE": "Payment Details",
+    "BILLING_TITLE": "Billing information",
+    "ADVANTAGES": {
+      "ADVANTAGE_TEXT_1": "Online Accutane treatment from the comfort of your home.",
+      "ADVANTAGE_TEXT_2": "No need to physically visit a doctor.",
+      "ADVANTAGE_TEXT_3": "Accutane prescribed right to your local pharmacy.",
+      "ADVANTAGE_TEXT_4": "Expert physicians & customized treatment plans."
+    }
+  },
+  "PHOTOS": {
+    "TITLE": "Getting Ready for Your Consultation",
+    "DESCRIPTION": "To ensure your treatment is as complete as possible, we’ll need some recent pictures of your acne.",
+    "PATIENT_ID_TITLE": "Patient ID",
+    "PATIENT_ID_DESCRIPTION": "We’ll need a photo of your ID (or your parent’s ID if you’re under 18). This is a legal requirement that must be carried out before we render any medical services.",
+    "ACNE_TITLE": "Acne pictures",
+    "ACNE_DESCRIPTION": "Try to get a clear, complete photo of the affected areas. Please attach recent photos, as it helps us to provide the best treatment possible.",
+    "OPTIONAL_TITLE": "Optional Photos",
+    "OPTIONAL_DESCRIPTION": "If the patient’s back and chest also present acne, please attach related photos below."
+  },
+  "THANKS": {
+    "TITLE": "Thank you for choosing AcneXpert!",
+    "DESCRIPTION": "Your physician will be in touch about your first consultation soon via the phone number you provided.",
+    "GETTING_READY": {
+      "TITLE": "Getting ready",
+      "DESCRIPTION": "Follow these tips to get ready for your first appointment:",
+      "TIP_1": "To make sure you receive fast service, please answer any call you get from an unknown or blocked number —that will be your doctor",
+      "TIP_2": "If you’re under 18, your parent / guardian MUST be on the call with you",
+      "TIP_3": "If your parent / guardian is not physically present, your doctor will be able to invite them to a conference call",
+      "TIP_4": "During normal business hours, you can expect your call within four hours at the latest"
+    },
+    "WHATS_NEXT_TITLE": "What’s next?",
+    "WHATS_NEXT_DESCRIPTION": "After your consultation, your doctor will post your treatment plan here. You’ll be able to view it from the Patient Dashboard, submit your monthly follow-up visits and progress pictures, and schedule new consultations. \n\n We’re glad to have you with us, and we’re looking forward to helping you to cure your acne once and for all. One of our AcneXpert physicians will be in touch with you shortly.",
+    "QUESTIONS_TITLE": "Still have questions?",
+    "QUESTIONS_DESCRIPTION": "Contact us, we’d love to chat!",
+    "EMAIL": "support@acnexpert.com",
+    "FAQ": "Frequently Asked Questions"
+  },
+  "COMPLETE": {
+    "TITLE": "Congratulations, Felipe!",
+    "DESCRIPTION": "You finished your treatment!\n We wish you all the best with your new, acne-free life.",
+    "RATE_US": "Did you enjoy being treated by AcneXpert? \nHelp us to spread the word!",
+    "RATE_US_BUTTON": "Rate Us"
   }
 }

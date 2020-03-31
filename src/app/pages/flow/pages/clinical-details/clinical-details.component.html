@@ -5,7 +5,7 @@
 </app-flow-page-header>
 
 <div
-  class="c-form l-container l-linelength l-linelength--xl u-margin-top-double"
+  class="e-clinical-details c-form l-container l-linelength l-linelength--xl u-margin-top-double"
 >
   <div class="l-grid l-grid--c2">
     <div class="l-grid__item">
@@ -37,14 +37,22 @@
         <hr class="hr--full u-margin-bottom-double" />
 
         <div>
-          <button class="c-btn c-btn--large u-margin-top-double" type="submit">
-            {{ "CLINICAL_DETAILS.NEXT_BUTTON" | translate }}
+          <button class="c-btn c-btn--large" type="submit">
+            {{ "GENERAL.NEXT" | translate }}
           </button>
         </div>
       </form>
     </div>
     <div class="l-grid__item l-grid__item--illustration">
-      <img src="../../../../../assets/images/Illustration-16.svg" />
+      <img src="../../../../../assets/images/Illustration-18.svg" />
+
+      <img
+        class="e-clinical-details__scroll-image"
+        src="../../../../../assets/images/Illustration-19.svg"
+      />
+      <p class="e-clinical-details__scroll-text">
+        {{ "CLINICAL_DETAILS.SCROLL_MESSAGE" | translate }}
+      </p>
     </div>
   </div>
 </div>

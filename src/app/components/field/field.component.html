@@ -1,4 +1,4 @@
-<div class="c-field__title">{{ title }}</div>
+<div class="c-field__title" *ngIf="type !== 'file'">{{ title }}</div>
 <div class="c-field__body" [ngSwitch]="type">
   <div *ngSwitchCase="'text'">
     <input
@@ -41,6 +41,88 @@
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
     ></my-date-picker>
+  </div>
+
+  <div class="c-field__file" *ngSwitchCase="'file'">
+    <input
+      [id]="key + '-file'"
+      type="file"
+      [placeholder]="placeholder"
+      (change)="updateFileChanges($event.target.files)"
+    />
+    <label
+      [for]="key + '-file'"
+      appDnd
+      (fileDropped)="updateFileChanges($event)"
+    >
+      <div class="c-field__file-image" [ngSwitch]="icon">
+        <img
+          src="../../../assets/images/icons/back.svg"
+          *ngSwitchCase="'back'"
+        /><img
+          src="../../../assets/images/icons/face.svg"
+          *ngSwitchCase="'front'"
+        /><img
+          src="../../../assets/images/icons/body.svg"
+          *ngSwitchCase="'chest'"
+        /><img
+          src="../../../assets/images/icons/left.svg"
+          *ngSwitchCase="'left'"
+        /><img
+          src="../../../assets/images/icons/right.svg"
+          *ngSwitchCase="'right'"
+        /><img
+          src="../../../assets/images/icons/photo_id.svg"
+          *ngSwitchCase="'id'"
+        />
+      </div>
+      <div class="c-field__file-description">
+        <h6>{{ title }}</h6>
+
+        <p *ngIf="!value">{{ "FIELDS.PHOTO_PLACEHOLDER" | translate }}</p>
+        <p *ngIf="value">
+          <fa-icon
+            class="c-field__file-attached-icon"
+            [icon]="['fas', 'check-circle']"
+          ></fa-icon>
+          {{ value.name }} {{ "FIELDS.PHOTO_ATTACHED" | translate }}
+        </p>
+      </div>
+    </label>
+  </div>
+
+  <div class="e-field__card" *ngSwitchCase="'card'">
+    <input
+      type="tel"
+      autocomplete="cc-number"
+      ccNumber
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
+    <span></span>
+  </div>
+
+  <div *ngSwitchCase="'exp'">
+    <input
+      type="tel"
+      autocomplete="cc-exp"
+      ccExp
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
+  </div>
+
+  <div *ngSwitchCase="'cvc'">
+    <input
+      type="tel"
+      autocomplete="off"
+      ccCVC
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+    />
   </div>
 
   <div *ngSwitchCase="'phone'">

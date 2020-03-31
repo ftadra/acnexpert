@@ -1,0 +1,91 @@
+<app-flow-page-header
+  [title]="'THANKS.TITLE' | translate"
+  [description]="'THANKS.DESCRIPTION' | translate"
+>
+</app-flow-page-header>
+
+<div class="l-container l-linelength l-linelength--xl u-margin-top-double">
+  <div class="l-grid l-grid--c2">
+    <div class="l-grid__item">
+      <div class="c-section u-margin-bottom-quad">
+        <h3 class="c-section__title">
+          <span>
+            {{ "THANKS.GETTING_READY.TITLE" | translate }}
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <p>{{ "THANKS.GETTING_READY.TITLE" | translate }}</p>
+          <ul class="c-list c-list--checkmark">
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'check']"
+              ></fa-icon>
+              {{ "THANKS.GETTING_READY.TIP_1" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'check']"
+              ></fa-icon>
+              {{ "THANKS.GETTING_READY.TIP_2" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'check']"
+              ></fa-icon>
+              {{ "THANKS.GETTING_READY.TIP_3" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'check']"
+              ></fa-icon>
+              {{ "THANKS.GETTING_READY.TIP_4" | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-section u-margin-bottom-double">
+        <h3 class="c-section__title">
+          <span>
+            {{ "THANKS.WHATS_NEXT_TITLE" | translate }}
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <p>{{ "THANKS.WHATS_NEXT_DESCRIPTION" | translate }}</p>
+        </div>
+      </div>
+
+      <div class="c-section u-margin-bottom-double">
+        <h3 class="c-section__title">
+          <span>
+            {{ "THANKS.QUESTIONS_TITLE" | translate }}
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <p>{{ "THANKS.QUESTIONS_DESCRIPTION" | translate }}</p>
+
+          <div class="u-margin-bottom-double">
+            <a href="mailto:{{ 'THANKS.EMAIL' | translate }}" class="c-link">
+              {{ "THANKS.EMAIL" | translate }}
+            </a>
+          </div>
+          <div>
+            <a [routerLink]="['/faq']" class="c-link">
+              {{ "THANKS.FAQ" | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/illustration-21.svg" />
+    </div>
+  </div>
+</div>

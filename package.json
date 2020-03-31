@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
+    "angular-cc-library": "^1.2.5",
     "mydatepicker": "^2.6.10",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.4.0",

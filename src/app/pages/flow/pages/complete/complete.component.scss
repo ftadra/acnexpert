@@ -1,14 +1,21 @@
 @import "../../../../../assets/styles/colors.scss";
 @import "../../../../../assets/styles/sizing.scss";
 
-.e-flow-page-header {
+.e-complete {
   display: flex;
   align-items: center;
-  min-height: 270px;
-  padding: $size-double 0;
+  height: 100%;
+  padding: $size-quad 0;
+  margin-bottom: -6rem;
   background: $primary--100;
 
   .l-container {
     align-items: center;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
   }
 }

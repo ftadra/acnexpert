@@ -33,6 +33,14 @@
   }
 }
 
+form {
+  .l-grid {
+    &__item {
+      padding: 0 $size-one;
+    }
+  }
+}
+
 .l-linelength {
   max-width: 64rem;
 

@@ -1,0 +1,50 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-billing {
+  &__pricing {
+    .c-list {
+      font-weight: 600;
+
+      &__checkmark {
+        width: 26px;
+        margin-right: $size-one;
+        font-size: 1.4rem;
+      }
+    }
+
+    &-description {
+      color: $gray--600;
+    }
+
+    &-price {
+      margin-left: auto;
+      color: $primary--500;
+    }
+
+    &-disable {
+      position: relative;
+      margin-left: auto;
+      color: $gray--500;
+      font-weight: 400;
+    }
+
+    &-tooltip {
+      position: absolute;
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1rem;
+      left: 50%;
+
+      p {
+        display: inline-block;
+        margin-left: 1rem;
+        width: 7rem;
+        font-size: 0.85rem;
+        line-height: 1.4em;
+        text-align: center;
+        transform: rotate(10deg);
+      }
+    }
+  }
+}

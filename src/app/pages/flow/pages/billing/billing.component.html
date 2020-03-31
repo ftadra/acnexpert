@@ -1,0 +1,188 @@
+<app-flow-page-header
+  [title]="'BILLING.TITLE' | translate"
+  [description]="'BILLING.DESCRIPTION' | translate"
+>
+</app-flow-page-header>
+
+<div
+  class="e-billing c-form l-container l-linelength l-linelength--xl u-margin-top-double"
+>
+  <div class="l-grid l-grid--c2">
+    <div class="l-grid__item">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="e-billing__pricing c-section u-margin-bottom-quad">
+          <h3 class="c-section__title">
+            <span>
+              {{ "BILLING.PRICING_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <p>{{ "BILLING.PRICING_DESCRIPTION" | translate }}</p>
+
+            <ul class="c-list c-list--checkmark">
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'stethoscope']"
+                ></fa-icon>
+                {{ "PRICE.PRICING_TITLE_1" | translate }}
+                <span class="e-billing__pricing-price">
+                  {{ "PRICE.PRICING_VALUE_1" | translate }}
+                </span>
+              </li>
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'sync-alt']"
+                ></fa-icon>
+                {{ "PRICE.PRICING_TITLE_2" | translate }}
+                <span class="e-billing__pricing-price">
+                  {{ "PRICE.PRICING_VALUE_2" | translate }}
+                </span>
+              </li>
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'prescription-bottle-alt']"
+                ></fa-icon>
+                {{ "PRICE.PRICING_TITLE_3" | translate }}
+                <div class="e-billing__pricing-disable">
+                  {{ "PRICE.PRICING_VALUE_3" | translate }}
+                  <div class="e-billing__pricing-tooltip">
+                    <img src="../../../../../assets/images/drawn-arrow.svg" />
+                    <p>
+                      {{ "HOME.PRICING.INSURANCE_COVERED" | translate }}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c-section u-margin-bottom-quad">
+          <h3 class="c-section__title">
+            <span>
+              {{ "BILLING.WHY_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <ul class="c-list c-list--checkmark">
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'check']"
+                ></fa-icon>
+                {{ "BILLING.ADVANTAGES.ADVANTAGE_TEXT_1" | translate }}
+              </li>
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'check']"
+                ></fa-icon
+                >{{ "BILLING.ADVANTAGES.ADVANTAGE_TEXT_2" | translate }}
+              </li>
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'check']"
+                ></fa-icon
+                >{{ "BILLING.ADVANTAGES.ADVANTAGE_TEXT_3" | translate }}
+              </li>
+              <li class="c-list__item">
+                <fa-icon
+                  class="c-list__checkmark"
+                  [icon]="['fas', 'check']"
+                ></fa-icon
+                >{{ "BILLING.ADVANTAGES.ADVANTAGE_TEXT_4" | translate }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c-section u-margin-bottom-double">
+          <h3 class="c-section__title">
+            <span>
+              {{ "BILLING.PAYMENT_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <app-field
+              [title]="'FIELDS.CARD_HOLDER_NAME' | translate"
+              [placeholder]="'FIELDS.CARD_HOLDER_NAME_PLACEHOLDER' | translate"
+              type="text"
+              formControlName="card_holder_name"
+            ></app-field
+            ><app-field
+              [title]="'FIELDS.CARD_NUMBER' | translate"
+              [placeholder]="'FIELDS.CARD_NUMBER_PLACEHOLDER' | translate"
+              type="card"
+              formControlName="card_number"
+            ></app-field>
+
+            <div class="l-grid l-grid--c3">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.EXP_DATE' | translate"
+                  [placeholder]="'FIELDS.EXP_DATE_PLACEHOLDER' | translate"
+                  type="exp"
+                  formControlName="exp_date"
+                ></app-field>
+              </div>
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.SECURITY_CODE' | translate"
+                  [placeholder]="'FIELDS.SECURITY_CODE_PLACEHOLDER' | translate"
+                  type="cvc"
+                  formControlName="security_code"
+                ></app-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <h3 class="c-section__title">
+            <span>
+              {{ "BILLING.BILLING_TITLE" | translate }}
+            </span>
+            <span class="c-section__title-decoration"></span>
+          </h3>
+          <div class="c-section__body">
+            <app-field
+              [title]="'FIELDS.BILLING_ADDRESS' | translate"
+              [placeholder]="'FIELDS.BILLING_ADDRESS_PLACEHOLDER' | translate"
+              type="text"
+              formControlName="billing_address"
+            ></app-field>
+
+            <div class="l-grid l-grid--c3">
+              <div class="l-grid__item">
+                <app-field
+                  [title]="'FIELDS.ZIP_CODE' | translate"
+                  type="number"
+                  formControlName="zip_code"
+                >
+                </app-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr--full u-margin-top-double u-margin-bottom-double" />
+
+        <div>
+          <button class="c-btn c-btn--large" type="submit">
+            {{ "GENERAL.NEXT" | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="l-grid__item l-grid__item--illustration">
+      <img src="../../../../../assets/images/Illustration-17.svg" />
+    </div>
+  </div>
+</div>

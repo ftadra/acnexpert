@@ -1,0 +1,50 @@
+.e-field__card {
+  position: relative;
+
+  span {
+    background: url("../../../assets/images/credit-cards.png") no-repeat top
+      left;
+    background-size: 80%;
+    width: 50px;
+    height: 24px;
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 6px;
+  }
+
+  .amex + span {
+    background-position: 0 0;
+    display: inline-block;
+  }
+
+  .diners + span {
+    background-position: 0 -128px;
+    display: inline-block;
+  }
+
+  .elo + span {
+    background-position: 0 -182px;
+    display: inline-block;
+  }
+
+  .hipercard + span {
+    background-position: 0 -256px;
+    display: inline-block;
+  }
+
+  .mastercard + span {
+    background-position: 0 -320px;
+    display: inline-block;
+  }
+
+  .visa + span {
+    background-position: 0 -384px;
+    display: inline-block;
+  }
+
+  .hiper + span {
+    background-position: 0 -444.8px;
+    display: inline-block;
+  }
+}
