@@ -1,0 +1,75 @@
+<div class="c-modal e-quiz-modal">
+  <button class="c-modal__close" (click)="close()">
+    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+  </button>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h4 class="c-modal__title">
+      {{ "MODALS.SUBSCRIPTION_TITLE" | translate }}
+    </h4>
+
+    <app-field
+      [title]="'FIELDS.CARD_HOLDER_NAME' | translate"
+      [placeholder]="'FIELDS.CARD_HOLDER_NAME_PLACEHOLDER' | translate"
+      type="text"
+      formControlName="card_holder_name"
+    ></app-field
+    ><app-field
+      [title]="'FIELDS.CARD_NUMBER' | translate"
+      [placeholder]="'FIELDS.CARD_NUMBER_PLACEHOLDER' | translate"
+      type="card"
+      formControlName="card_number"
+    ></app-field>
+
+    <div class="l-grid l-grid--c3">
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.EXP_DATE' | translate"
+          [placeholder]="'FIELDS.EXP_DATE_PLACEHOLDER' | translate"
+          type="exp"
+          formControlName="exp_date"
+        ></app-field>
+      </div>
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.SECURITY_CODE' | translate"
+          [placeholder]="'FIELDS.SECURITY_CODE_PLACEHOLDER' | translate"
+          type="cvc"
+          formControlName="security_code"
+        ></app-field>
+      </div>
+    </div>
+
+    <hr class="hr--full" />
+
+    <app-field
+      [title]="'FIELDS.BILLING_ADDRESS' | translate"
+      [placeholder]="'FIELDS.BILLING_ADDRESS_PLACEHOLDER' | translate"
+      type="text"
+      formControlName="billing_address"
+    >
+    </app-field>
+
+    <div class="l-grid l-grid--c3">
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.ZIP_CODE' | translate"
+          type="number"
+          formControlName="zip_code"
+        >
+        </app-field>
+      </div>
+    </div>
+
+    <div class="c-modal__footer">
+      <div class="c-modal__footer-buttons">
+        <button class="c-btn c-btn--clear" (click)="close()">
+          {{ "GENERAL.CANCEL" | translate }}
+        </button>
+
+        <button class="c-btn" (click)="next()">
+          {{ "GENERAL.SUBMIT" | translate }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

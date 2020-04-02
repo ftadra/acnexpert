@@ -1,0 +1,82 @@
+<div class="c-modal e-quiz-modal">
+  <button class="c-modal__close" (click)="close()">
+    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+  </button>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h4 class="c-modal__title">{{ "MODALS.PROFILE_TITLE" | translate }}</h4>
+
+    <app-field
+      [title]="'FIELDS.NAME' | translate"
+      [placeholder]="'FIELDS.NAME_PLACEHOLDER' | translate"
+      type="text"
+      formControlName="name"
+    ></app-field>
+
+    <div class="l-grid l-grid--c3">
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.BIRTHDAY' | translate"
+          [placeholder]="'FIELDS.BIRTHDAY_PLACEHOLDER' | translate"
+          type="date"
+          formControlName="birthday"
+        ></app-field>
+      </div>
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.GENDER' | translate"
+          [options]="genderOptions"
+          type="select"
+          formControlName="gender"
+        ></app-field>
+      </div>
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.WEIGHT' | translate"
+          [placeholder]="'FIELDS.WEIGHT_PLACEHOLDER' | translate"
+          type="text"
+          formControlName="weight"
+        >
+        </app-field>
+      </div>
+    </div>
+
+    <app-field
+      [title]="'FIELDS.ADDRESS' | translate"
+      [placeholder]="'FIELDS.ADDRESS_PLACEHOLDER' | translate"
+      type="text"
+      formControlName="address"
+    ></app-field>
+
+    <div class="l-grid l-grid--c2">
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.STATE' | translate"
+          [options]="stateOptions"
+          type="select"
+          formControlName="state"
+        >
+        </app-field>
+      </div>
+      <div class="l-grid__item">
+        <app-field
+          [title]="'FIELDS.PHONE' | translate"
+          [placeholder]="'FIELDS.PHONE_PLACEHOLDER' | translate"
+          type="phone"
+          formControlName="phone"
+        ></app-field>
+      </div>
+    </div>
+
+    <div class="c-modal__footer">
+      <div class="c-modal__footer-buttons">
+        <button class="c-btn c-btn--clear" (click)="close()">
+          {{ "GENERAL.CANCEL" | translate }}
+        </button>
+
+        <button class="c-btn" (click)="next()">
+          {{ "GENERAL.SUBMIT" | translate }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

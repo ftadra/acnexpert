@@ -204,7 +204,12 @@
     "PHOTO_PATIENT_LEFT": "Patient’s Left Face",
     "PHOTO_PATIENT_FRONT": "Patient’s Front Face",
     "PHOTO_PATIENT_BACK": "Patient’s Back",
-    "PHOTO_PATIENT_CHEST": "Patient’s Chest"
+    "PHOTO_PATIENT_CHEST": "Patient’s Chest",
+    "TOS": "Terms of Service",
+    "RECOMMEND_SCORE": "How highly would you recommend AcneXpert to a friend or loved one?",
+    "RECOMMEND_TEXT": "What would you like people to know about our service?",
+    "RECOMMEND_TEXT_PLACEHOLDER": "Share with others what you liked about the service, our strong points and where we need to improve",
+    "ALLOW_POSTING_PICTURES": "Allow us to use your pictures on our website?"
   },
   "CLINICAL_DETAILS": {
     "TITLE": "Nice to meet you, Felipe",
@@ -215,7 +220,10 @@
     "YES": "Yes",
     "NO": "No",
     "NEXT": "Next",
-    "SAVE": "Save"
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "SUBMIT": "Submit",
+    "LEARN_MORE": "Learn More"
   },
   "BILLING": {
     "TITLE": "Payment Details",
@@ -265,5 +273,21 @@
     "DESCRIPTION": "You finished your treatment!\n We wish you all the best with your new, acne-free life.",
     "RATE_US": "Did you enjoy being treated by AcneXpert? \nHelp us to spread the word!",
     "RATE_US_BUTTON": "Rate Us"
+  },
+  "QUIZ": {
+    "WELCOME_TITLE": "Acne Quiz",
+    "WELCOME_DESCRIPTION": "Not sure you need Accutane yet? No worries, we got you covered. Within a few questions (it should only take 5 minutes) we’ll help you understand if Accutane may be right for you.",
+    "ELEGIBLE_TITLE": "You are eligible!",
+    "ELEGIBLE_DESCRIPTION": "Based on your answers, it seems Accutane may be the best treatment for you. And guess what, we’re here to help! Complete our registration process to start your treatment today.",
+    "OTHER_TITLE": "Other Options",
+    "OTHER_DESCRIPTION": "It looks you don’t really need Accutane yet! Accutane is a strong medication that permanently alters the course of acne. Based on your answers, we’d advise you to book a consultation in which we can discuss topical prescription treatment options."
+  },
+  "MODALS": {
+    "PROFILE_TITLE": "Profile",
+    "SUBSCRIPTION_TITLE": "Subscription",
+    "PHARMACY_TITLE": "Pharmacy",
+    "FOLLOW_UP_TITLE": "Follow-up form",
+    "RATE_US_TITLE": "Rate Us",
+    "TOS": "I confirm that I understand I am not to share my Accutane with any other person.  I understand that no refills are allowed and I must follow up with my doctor each month for my next prescription.  I understand I may not donate blood for at least 1 month after my last dose of Accutane.  I understand that Accutane should never be taken by any woman who is pregnant or planning pregnancy.  If I am female I understand that I must use two methods of contraception simultaneously and continuously for at least one month prior to intiation of isotretinoin treatment, during isotretinoin treatment and for one month after discontinuing isotretinoin treatment, unless I commit to continuous abstinence. I will inform my doctor and stop taking Accutane immediately should any of the above “red flag” side effects develop."
   }
 }

@@ -42,6 +42,14 @@ import { PhotosComponent } from './pages/flow/pages/photos/photos.component';
 import { ThanksComponent } from './pages/flow/pages/thanks/thanks.component';
 import { CompleteComponent } from './pages/flow/pages/complete/complete.component';
 import { DndDirective } from './directives/drag-and-drop.directive';
+import { DomService } from './services/dom.service';
+import { ModalService } from './services/modal.service';
+import { QuizModalComponent } from './pages/home/modals/quiz/quiz.component';
+import { PharmacyModalComponent } from './pages/flow/modals/pharmacy/pharmacy.component';
+import { ProfileModalComponent } from './pages/flow/modals/profile/profile.component';
+import { RateUsModalComponent } from './pages/flow/modals/rate-us/rate-us.component';
+import { SubscriptionsModalComponent } from './pages/flow/modals/subscriptions/subscriptions.component';
+import { FollowUpModalComponent } from './pages/flow/modals/follow-up/follow-up.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -76,7 +84,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     PhotosComponent,
     ThanksComponent,
     CompleteComponent,
-    DndDirective
+    DndDirective,
+    QuizModalComponent,
+    PharmacyModalComponent,
+    ProfileModalComponent,
+    RateUsModalComponent,
+    SubscriptionsModalComponent,
+    FollowUpModalComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +110,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DomService,
+    ModalService
+  ],
+  entryComponents: [
+    QuizModalComponent,
+    PharmacyModalComponent,
+    ProfileModalComponent,
+    RateUsModalComponent,
+    SubscriptionsModalComponent,
+    FollowUpModalComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

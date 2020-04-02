@@ -1,0 +1,73 @@
+<div class="c-modal e-quiz-modal">
+  <button class="c-modal__close" (click)="close()">
+    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+  </button>
+
+  <div [ngSwitch]="tab">
+    <div *ngSwitchCase="'welcome'">
+      <h4 class="c-modal__title">{{ "QUIZ.WELCOME_TITLE" | translate }}</h4>
+      <p class="c-modal__description">
+        {{ "QUIZ.WELCOME_DESCRIPTION" | translate }}
+      </p>
+
+      <img
+        class="u-margin-top u-margin-bottom"
+        src="../../../../../assets/images/Illustration-23.png"
+      />
+    </div>
+
+    <div *ngSwitchCase="'quiz'">
+      <h4 class="c-modal__title">{{ "QUIZ.WELCOME_TITLE" | translate }}</h4>
+      <form [formGroup]="form">
+        <app-field
+          *ngFor="let field of questions[quizTab].content"
+          [key]="field.key"
+          [title]="field.label"
+          [placeholder]="field.desc"
+          [type]="field.type"
+          [formControlName]="field.key"
+          [options]="field.choices"
+        >
+        </app-field>
+      </form>
+    </div>
+
+    <div *ngSwitchCase="'elegible'">
+      <h4 class="c-modal__title">{{ "QUIZ.ELEGIBLE_TITLE" | translate }}</h4>
+      <p class="c-modal__description">
+        {{ "QUIZ.ELEGIBLE_DESCRIPTION" | translate }}
+      </p>
+
+      <img
+        class="u-margin-top u-margin-bottom"
+        src="../../../../../assets/images/Illustration-24.svg"
+      />
+    </div>
+
+    <div *ngSwitchCase="'other'">
+      <h4 class="c-modal__title">{{ "QUIZ.OTHER_TITLE" | translate }}</h4>
+      <p class="c-modal__description">
+        {{ "QUIZ.OTHER_DESCRIPTION" | translate }}
+      </p>
+
+      <img
+        class="u-margin-top u-margin-bottom"
+        src="../../../../../assets/images/Illustration-25.svg"
+      />
+    </div>
+  </div>
+
+  <div class="c-modal__footer">
+    <p>Step 1/{{ maxTabs }}</p>
+
+    <div class="c-modal__footer-buttons">
+      <button class="c-btn c-btn--clear" (click)="close()">
+        {{ "GENERAL.CANCEL" | translate }}
+      </button>
+
+      <button class="c-btn" (click)="next()">
+        {{ "GENERAL.NEXT" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

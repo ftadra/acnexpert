@@ -1,0 +1,10 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.e-quiz-modal {
+  .c-modal__footer {
+    p {
+      margin: 0;
+      color: $gray--500;
+    }
+  }
+}

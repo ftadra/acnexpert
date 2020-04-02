@@ -1,0 +1,43 @@
+<div class="c-modal e-quiz-modal">
+  <button class="c-modal__close" (click)="close()">
+    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+  </button>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h4 class="c-modal__title">{{ "MODALS.RATE_US_TITLE" | translate }}</h4>
+
+    <app-field
+      [title]="'FIELDS.RECOMMEND_SCORE' | translate"
+      type="score"
+      formControlName="score"
+    ></app-field>
+
+    <app-field
+      [title]="'FIELDS.RECOMMEND_TEXT' | translate"
+      [placeholder]="'FIELDS.RECOMMEND_TEXT_PLACEHOLDER' | translate"
+      type="textarea"
+      formControlName="feedback"
+    ></app-field>
+
+    <label class="c-label">
+      <input type="checkbox" formControlName="allow_share__photos" />
+      <span>
+        {{ "FIELDS.ALLOW_POSTING_PICTURES" | translate }}
+      </span>
+      <a class="c-link">
+        {{ "GENERAL.LEARN_MORE" | translate }}
+      </a>
+    </label>
+
+    <div class="c-modal__footer">
+      <div class="c-modal__footer-buttons">
+        <button class="c-btn c-btn--clear" (click)="close()">
+          {{ "GENERAL.CANCEL" | translate }}
+        </button>
+
+        <button class="c-btn" (click)="next()">
+          {{ "GENERAL.SUBMIT" | translate }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

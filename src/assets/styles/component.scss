@@ -4,7 +4,7 @@
 hr {
   width: 24rem;
   height: 1px;
-  margin: 0 auto;
+  margin: $size-double auto;
   background-color: $gray--300;
   border: 0;
 
@@ -51,6 +51,12 @@ hr {
     .c-btn--inverted {
       border-color: $primary--500;
     }
+  }
+
+  &--clear {
+    background: transparent;
+    border: 0;
+    color: $primary--500;
   }
 }
 
@@ -308,5 +314,57 @@ hr {
     padding: $size-half $size-tq;
     text-align: center;
     cursor: pointer;
+  }
+}
+
+.c-modal {
+  max-width: 30rem;
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: $gray--100;
+    border-radius: 50%;
+    border: 0;
+    color: $gray--700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      color: $primary--500;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $gray--200;
+    padding-top: $size-one;
+    margin-top: $size-one;
+
+    &-buttons {
+      margin-left: auto;
+
+      .c-btn {
+        margin-left: $size-one;
+      }
+    }
   }
 }
