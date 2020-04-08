@@ -206,10 +206,14 @@
     "PHOTO_PATIENT_BACK": "Patient’s Back",
     "PHOTO_PATIENT_CHEST": "Patient’s Chest",
     "TOS": "Terms of Service",
+    "TOS_READ": "I have read and accepted the terms of service",
     "RECOMMEND_SCORE": "How highly would you recommend AcneXpert to a friend or loved one?",
     "RECOMMEND_TEXT": "What would you like people to know about our service?",
     "RECOMMEND_TEXT_PLACEHOLDER": "Share with others what you liked about the service, our strong points and where we need to improve",
-    "ALLOW_POSTING_PICTURES": "Allow us to use your pictures on our website?"
+    "ALLOW_POSTING_PICTURES": "Allow us to use your pictures on our website?",
+    "CALL_PRIOR_RENEWAL": "Prior to your renewal would you like your doctor to call you?",
+    "COMMENTS": "Anything else you want your doctor to know?",
+    "COMMENTS_PLACEHOLDER": "Ask questions, concerns, side-effects…"
   },
   "CLINICAL_DETAILS": {
     "TITLE": "Nice to meet you, Felipe",

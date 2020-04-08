@@ -1,1 +1,127 @@
-<p>follow-up works!</p>
+<div class="c-modal e-quiz-modal">
+  <button class="c-modal__close" (click)="close()">
+    <fa-icon [icon]="['fas', 'times']"></fa-icon>
+  </button>
+
+  <h4 class="c-modal__title">{{ "MODALS.FOLLOW_UP_TITLE" | translate }}</h4>
+
+  <form [formGroup]="form">
+    <div [ngSwitch]="tab">
+      <div *ngSwitchCase="'questions'">
+        <app-field
+          *ngFor="let field of questions[quizTab].content"
+          [key]="field.key"
+          [title]="field.label"
+          [placeholder]="field.desc"
+          [type]="field.type"
+          [formControlName]="field.key"
+          [options]="field.choices"
+          [description]="field.desc"
+        >
+        </app-field>
+      </div>
+
+      <div *ngSwitchCase="'photos'">
+        <h6 class="u-margin-top-double">
+          {{ "PHOTOS.ACNE_TITLE" | translate }}
+        </h6>
+        <p class="u-margin-bottom-double">
+          {{ "PHOTOS.ACNE_DESCRIPTION" | translate }}
+        </p>
+
+        <app-field
+          [title]="'FIELDS.PHOTO_PATIENT_LEFT' | translate"
+          type="file"
+          icon="left"
+          key="photo_left"
+          formControlName="photo_left"
+        >
+        </app-field>
+
+        <app-field
+          [title]="'FIELDS.PHOTO_PATIENT_RIGHT' | translate"
+          type="file"
+          icon="right"
+          key="photo_right"
+          formControlName="photo_right"
+        >
+        </app-field>
+        <app-field
+          [title]="'FIELDS.PHOTO_PATIENT_FRONT' | translate"
+          type="file"
+          icon="front"
+          key="photo_front"
+          formControlName="photo_front"
+        >
+        </app-field>
+
+        <h6 class="u-margin-top-double">
+          {{ "PHOTOS.OPTIONAL_TITLE" | translate }}
+        </h6>
+        <p class="u-margin-bottom-double">
+          {{ "PHOTOS.OPTIONAL_DESCRIPTION" | translate }}
+        </p>
+
+        <app-field
+          [title]="'FIELDS.PHOTO_PATIENT_CHEST' | translate"
+          type="file"
+          icon="chest"
+          key="photo_chest"
+          formControlName="photo_chest"
+        >
+        </app-field>
+
+        <app-field
+          [title]="'FIELDS.PHOTO_PATIENT_BACK' | translate"
+          type="file"
+          icon="back"
+          key="photo_back"
+          formControlName="photo_back"
+        >
+        </app-field>
+      </div>
+
+      <div *ngSwitchCase="'finish'">
+        <app-field
+          [title]="'FIELDS.CALL_PRIOR_RENEWAL' | translate"
+          type="boolean"
+          key="call_prior_renewal"
+          formControlName="call_prior_renewal"
+        >
+        </app-field>
+
+        <app-field
+          [title]="'FIELDS.COMMENTS' | translate"
+          [placeholder]="'FIELDS.COMMENTS_PLACEHOLDER' | translate"
+          type="textarea"
+          formControlName="comments"
+        >
+        </app-field>
+
+        <h6>{{ "FIELDS.TOS" | translate }}</h6>
+        <p>{{ "MODALS.TOS" | translate }}</p>
+
+        <label class="c-label">
+          <input type="checkbox" />
+          <span>
+            {{ "FIELDS.TOS_READ" | translate }}
+          </span>
+        </label>
+      </div>
+    </div>
+  </form>
+
+  <div class="c-modal__footer">
+    <p>Step 1/{{ maxTabs }}</p>
+
+    <div class="c-modal__footer-buttons">
+      <button class="c-btn c-btn--clear" (click)="close()">
+        {{ "GENERAL.CANCEL" | translate }}
+      </button>
+
+      <button class="c-btn" (click)="next()">
+        {{ "GENERAL.NEXT" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
