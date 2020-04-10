@@ -53,6 +53,7 @@ import { FollowUpModalComponent } from './pages/flow/modals/follow-up/follow-up.
 import { DashboardComponent } from './pages/flow/pages/dashboard/dashboard.component';
 import { WeeklyIntakeViewComponent } from './pages/flow/components/weekly-intake-view/weekly-intake-view.component';
 import { ProgressFlowComponent } from './pages/flow/components/progress-flow/progress-flow.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -96,7 +97,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FollowUpModalComponent,
     DashboardComponent,
     WeeklyIntakeViewComponent,
-    ProgressFlowComponent
+    ProgressFlowComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
