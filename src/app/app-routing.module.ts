@@ -11,6 +11,7 @@ import { BillingComponent } from './pages/flow/pages/billing/billing.component';
 import { PhotosComponent } from './pages/flow/pages/photos/photos.component';
 import { ThanksComponent } from './pages/flow/pages/thanks/thanks.component';
 import { CompleteComponent } from './pages/flow/pages/complete/complete.component';
+import { DashboardComponent } from './pages/flow/pages/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -33,8 +34,14 @@ const routes: Routes = [
       { path: 'billing', component: BillingComponent },
       { path: 'photos', component: PhotosComponent },
       { path: 'thanks', component: ThanksComponent },
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'complete', component: CompleteComponent }
     ]
+  },
+  {
+    path: '**',
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
 ];
 

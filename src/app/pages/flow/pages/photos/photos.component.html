@@ -1,6 +1,7 @@
 <app-flow-page-header
   [title]="'PHOTOS.TITLE' | translate"
   [description]="'PHOTOS.DESCRIPTION' | translate"
+  [currentStep]="2"
 >
 </app-flow-page-header>
 
@@ -17,7 +18,7 @@
           </h3>
 
           <div class="c-section__body">
-            <p class=" u-margin-bottom-double">
+            <p class="u-margin-bottom-double">
               {{ "PHOTOS.PATIENT_ID_DESCRIPTION" | translate }}
             </p>
 
@@ -39,7 +40,7 @@
             <span class="c-section__title-decoration"></span>
           </h3>
           <div class="c-section__body">
-            <p class=" u-margin-bottom-double">
+            <p class="u-margin-bottom-double">
               {{ "PHOTOS.ACNE_DESCRIPTION" | translate }}
             </p>
 
@@ -72,7 +73,7 @@
             <h6 class="u-margin-top-double">
               {{ "PHOTOS.OPTIONAL_TITLE" | translate }}
             </h6>
-            <p class=" u-margin-bottom-double">
+            <p class="u-margin-bottom-double">
               {{ "PHOTOS.OPTIONAL_DESCRIPTION" | translate }}
             </p>
 

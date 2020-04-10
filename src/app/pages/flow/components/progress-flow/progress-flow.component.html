@@ -1,0 +1,27 @@
+<div class="l-linelength">
+  <div class="e-progress-flow">
+    <div
+      *ngFor="let step of steps; let i = index"
+      class="e-progress-flow__item"
+      [class.e-progress-flow__item--done]="
+        i < currentStep || currentStepComplete
+      "
+      [class.e-progress-flow__item--current]="i === currentStep"
+    >
+      <div class="e-progress-flow__item-icon">
+        <span
+          *ngIf="i > currentStep || (i === currentStep && !currentStepComplete)"
+        >
+          {{ i + 1 }}
+        </span>
+        <fa-icon
+          *ngIf="i < currentStep || currentStepComplete"
+          [icon]="['fas', 'check']"
+        ></fa-icon>
+      </div>
+      <div class="e-progress-flow__item-label">
+        {{ step }}
+      </div>
+    </div>
+  </div>
+</div>

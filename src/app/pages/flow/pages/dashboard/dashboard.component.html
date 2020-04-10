@@ -1,1 +1,240 @@
-<p>dashboard works!</p>
+<app-flow-page-header
+  [title]="'DASHBOARD.TITLE' | translate"
+  [description]="'DASHBOARD.DESCRIPTION' | translate"
+  [currentStep]="3"
+>
+</app-flow-page-header>
+
+<div class="e-dashboard l-container">
+  <div class="e-dashboard__followup">
+    <div class="l-grid l-grid--c3">
+      <div class="l-grid__item e-dashboard__followup-title">
+        <h4>
+          {{ "DASHBOARD.UPCOMING_FOLLOWUP.TITLE" | translate }}
+        </h4>
+      </div>
+      <div
+        class="l-grid__item e-dashboard__followup-description l-linelength l-linelength--small"
+      >
+        <p>
+          {{ "DASHBOARD.UPCOMING_FOLLOWUP.DESCRIPTION" | translate }}
+        </p>
+      </div>
+      <div class="l-grid__item e-dashboard__followup-cta">
+        <a
+          class="c-btn c-btn--outline c-btn--outline"
+          (click)="startFollowUp()"
+        >
+          {{ "GENERAL.CONTINUE" | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-dashboard__treatment-plan">
+    <div class="l-grid l-grid--c3">
+      <div class="l-grid__item e-dashboard__treatment-plan-illustration">
+        <img src="../../../../../assets/images/Illustration-26.svg" />
+      </div>
+      <div class="l-grid__item e-dashboard__treatment-plan-description">
+        <h4>{{ "DASHBOARD.TREATMENT_PLAN.TITLE" | translate }}</h4>
+        <p>{{ "DASHBOARD.TREATMENT_PLAN.DESCRIPTION" | translate }}</p>
+
+        <h6 class="u-display-flex">
+          {{ "DASHBOARD.TREATMENT_PLAN.PHARMACY_TITLE" | translate }}
+          <a class="c-link c-link--update" (click)="editPharmacy()">
+            {{ "GENERAL.UPDATE" | translate }}
+          </a>
+        </h6>
+        <div class="e-dashboard__pharmacy">
+          <h5>CVS Timesquare</h5>
+          <p>108-7 Queens Blvd, Forest Hills</p>
+          <p>NY 11375, United States</p>
+        </div>
+      </div>
+      <div class="l-grid__item e-dashboard__treatment-plan-details">
+        <h6>{{ "DASHBOARD.TREATMENT_PLAN.PRESCRIPTION_TITLE" | translate }}</h6>
+        <p>Accutane</p>
+
+        <h6>{{ "DASHBOARD.TREATMENT_PLAN.DOSE_TITLE" | translate }}</h6>
+        <p class="u-margin-bottom-half">40mg twice a day</p>
+        <app-weekly-intake-view [days]="weeklyDosage"></app-weekly-intake-view>
+
+        <h6>{{ "DASHBOARD.TREATMENT_PLAN.VALID_FOR_TITLE" | translate }}</h6>
+        <p>30 days</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-grid l-grid--c3 e-dashboard__details">
+    <div class="l-grid__item">
+      <div class="c-section u-margin-bottom-double">
+        <h3 class="c-section__title">
+          <span>
+            {{ "DASHBOARD.PROFILE_TITLE" | translate }}
+            <a class="c-link c-link--update" (click)="editProfile()">
+              {{ "GENERAL.UPDATE" | translate }}
+            </a>
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <ul class="c-side-list">
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.GENDER" | translate }}
+              </h6>
+              <p class="c-side-list__value">Male</p>
+            </li>
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.STATE" | translate }}
+              </h6>
+              <p class="c-side-list__value">
+                Texas (TX)
+              </p>
+            </li>
+            <li class="c-side-list__item">
+              <hr />
+            </li>
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.WEIGHT" | translate }}
+              </h6>
+              <p class="c-side-list__value">
+                190 lbs
+              </p>
+            </li>
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.BIRTHDAY" | translate }}
+              </h6>
+              <p class="c-side-list__value">
+                02/13/1993
+              </p>
+            </li>
+            <li class="c-side-list__item">
+              <hr />
+            </li>
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.PHONE" | translate }}
+              </h6>
+              <p class="c-side-list__value">
+                +1 999 999 9999
+              </p>
+            </li>
+            <li class="c-side-list__item">
+              <h6 class="c-side-list__title">
+                {{ "FIELDS.EMAIL" | translate }}
+              </h6>
+              <p class="c-side-list__value">
+                doe.john.third@gmail.com
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l-grid__item">
+      <div class="c-section u-margin-bottom-double">
+        <h3 class="c-section__title">
+          <span>
+            {{ "DASHBOARD.SUBSCRIPTION_TITLE" | translate }}
+            <a class="c-link c-link--update" (click)="editSubscription()">
+              {{ "GENERAL.UPDATE" | translate }}
+            </a>
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <div class="e-dashboard__card">
+            <div class="e-dashboard__card-title">
+              <img
+                src="../../../../../assets/images/amazon-icon.svg"
+                class="e-dashboard__card-icon"
+              />
+            </div>
+            <div class="e-dashboard__card-value">
+              <h5>Felipe Tissot Tadra</h5>
+              <div class="e-dashboard__card-info">
+                <img
+                  src="../../../../../assets/images/mastercard-icon.svg"
+                  class="e-dashboard__card-icon"
+                />
+                <div class="e-dashboard__card-number">
+                  <h6>55** **** **** 0004</h6>
+                  <p>Exp. 15/02</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="c-list c-list--checkmark">
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'sync-alt']"
+              ></fa-icon>
+              <div>
+                <h6>
+                  {{ "PRICE.PRICING_TITLE_2" | translate }}
+                  <span class="e-billing__pricing-price">
+                    {{ "PRICE.PRICING_VALUE_2" | translate }}
+                  </span>
+                </h6>
+                <p>
+                  {{ "DASHBOARD.SUBSCRIPTION_DESCRIPTION" | translate }}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l-grid__item">
+      <div class="c-section u-margin-bottom-double">
+        <h3 class="c-section__title">
+          <span>
+            {{ "DASHBOARD.SIDE_EFFECTS.TITLE" | translate }}
+          </span>
+          <span class="c-section__title-decoration"></span>
+        </h3>
+        <div class="c-section__body">
+          <p>{{ "DASHBOARD.SIDE_EFFECTS.DESCRIPTION" | translate }}</p>
+
+          <ul class="c-list c-list--checkmark">
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'arrow-right']"
+              ></fa-icon>
+              {{ "DASHBOARD.SIDE_EFFECTS.ITEM_1" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'arrow-right']"
+              ></fa-icon>
+              {{ "DASHBOARD.SIDE_EFFECTS.ITEM_2" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'arrow-right']"
+              ></fa-icon>
+              {{ "DASHBOARD.SIDE_EFFECTS.ITEM_3" | translate }}
+            </li>
+            <li class="c-list__item">
+              <fa-icon
+                class="c-list__checkmark"
+                [icon]="['fas', 'arrow-right']"
+              ></fa-icon>
+              {{ "DASHBOARD.SIDE_EFFECTS.ITEM_4" | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

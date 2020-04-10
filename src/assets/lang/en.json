@@ -227,7 +227,9 @@
     "SAVE": "Save",
     "CANCEL": "Cancel",
     "SUBMIT": "Submit",
-    "LEARN_MORE": "Learn More"
+    "LEARN_MORE": "Learn More",
+    "UPDATE": "Update",
+    "CONTINUE": "Continue"
   },
   "BILLING": {
     "TITLE": "Payment Details",
@@ -293,5 +295,35 @@
     "FOLLOW_UP_TITLE": "Follow-up form",
     "RATE_US_TITLE": "Rate Us",
     "TOS": "I confirm that I understand I am not to share my Accutane with any other person.  I understand that no refills are allowed and I must follow up with my doctor each month for my next prescription.  I understand I may not donate blood for at least 1 month after my last dose of Accutane.  I understand that Accutane should never be taken by any woman who is pregnant or planning pregnancy.  If I am female I understand that I must use two methods of contraception simultaneously and continuously for at least one month prior to intiation of isotretinoin treatment, during isotretinoin treatment and for one month after discontinuing isotretinoin treatment, unless I commit to continuous abstinence. I will inform my doctor and stop taking Accutane immediately should any of the above “red flag” side effects develop."
+  },
+  "DASHBOARD": {
+    "TITLE": "Waiting Room",
+    "DESCRIPTION": "Here’s your treatment plan and upcoming follow-ups. Feel free to attach new pictures to track your progress.",
+    "UPCOMING_FOLLOWUP": {
+      "TITLE": "Upcoming follow-up",
+      "DESCRIPTION": "How have you been? In order for us to renew your prescription, we’ll need you to fill our follow-up form."
+    },
+    "TREATMENT_PLAN": {
+      "TITLE": "Treatment plan",
+      "DESCRIPTION": "Your doctor will update your prescription monthly to make sure your treatment is right for you.",
+      "DOCTOR_TITLE": "Your Doctor",
+      "PRESCRIPTION_TITLE": "Prescription",
+      "PHARMACY_TITLE": "Pharmacy",
+      "DOSE_TITLE": "Dose",
+      "VALID_FOR_TITLE": "Valid for"
+    },
+    "SIDE_EFFECTS": {
+      "TITLE": "Side Effects",
+      "DESCRIPTION": "As you start your treatment, you may notice some of the following side-effects. Don’t worry, these come on in the first month and then level off. Here’re some common ones:",
+      "ITEM_1": "Dryness of skin, nose",
+      "ITEM_2": "Rash",
+      "ITEM_3": "Cracks in the corners of the mouth",
+      "ITEM_4": "Nosebleeds"
+    },
+    "SUBSCRIPTION_TITLE": "Subscription",
+    "SUBSCRIPTION_DESCRIPTION": "The monthly treatment fee will be renewed automatically every month.",
+    "TREATMENT_HISTORY_TITLE": "Treatment History",
+    "PROFILE_TITLE": "Profile",
+    "MESSAGES_TITLE": "Messages"
   }
 }

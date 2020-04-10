@@ -1,0 +1,9 @@
+<div class="e-days">
+  <span
+    *ngFor="let day of availableDays; let i = index"
+    class="e-days__item"
+    [class.e-days__item--selected]="days.indexOf(i) > -1"
+  >
+    {{ day }}
+  </span>
+</div>

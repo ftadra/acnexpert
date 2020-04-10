@@ -1,0 +1,27 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-days {
+  display: flex;
+  margin: 0 -0.25rem;
+  margin-bottom: $size-one;
+
+  &__item {
+    width: $size-double;
+    height: $size-double;
+    border-radius: $size-one;
+    margin: 0 0.25rem;
+    background: $gray--200;
+
+    color: $gray--700;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: $size-double;
+    text-align: center;
+
+    &--selected {
+      background: $primary--500;
+      color: white;
+    }
+  }
+}

@@ -1,6 +1,13 @@
 <div class="e-flow-page-header">
-    <div class="l-container u-text-align-center l-linelength l-linelength--small">
-        <h4>{{ title }}</h4>
-        <p>{{ description }}</p>
+  <div class="l-container">
+    <div class="u-text-align-center l-linelength l-linelength--small">
+      <h4>{{ title }}</h4>
+      <p class="u-margin-bottom">{{ description }}</p>
     </div>
+
+    <app-progress-flow
+      [currentStep]="currentStep"
+      [currentStepComplete]="currentStepComplete"
+    ></app-progress-flow>
+  </div>
 </div>

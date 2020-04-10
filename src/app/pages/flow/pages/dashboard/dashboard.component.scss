@@ -1,0 +1,187 @@
+@import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
+
+.e-dashboard {
+  .c-link {
+    &--update {
+      margin-left: auto;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+
+  .c-section {
+    &__title {
+      font-size: 1.4rem;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__body {
+      > p {
+        color: $gray--700;
+      }
+    }
+  }
+
+  &__followup {
+    padding: $size-one $size-double;
+    margin: $size-double 0;
+    border-radius: 10px;
+    background: $primary--500;
+    color: white;
+
+    &-title {
+      width: 30%;
+      font-size: 1.6rem;
+
+      h4 {
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+
+    &-description {
+      width: 50%;
+      p {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+    }
+
+    &-cta {
+      width: 20%;
+      flex: 1 0 auto;
+
+      .c-btn {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__treatment-plan {
+    padding: 0 $size-double;
+    margin-bottom: $size-double;
+    border-radius: 10px;
+    background: $primary--100;
+
+    &-illustration {
+      padding-bottom: 0;
+
+      img {
+        margin-top: 3rem;
+        margin-bottom: -3rem;
+        margin-left: -4rem;
+      }
+    }
+
+    &-description {
+      padding: $size-double;
+
+      h6 {
+        margin-bottom: $size-half;
+        color: $primary--500;
+      }
+
+      p {
+        max-width: 20rem;
+        color: $gray--700;
+        font-size: 0.9rem;
+      }
+    }
+
+    &-details {
+      position: relative;
+      padding: $size-double;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $size-double;
+        left: 0;
+        bottom: $size-double;
+        border-left: 1px solid $gray--300;
+      }
+
+      h6 {
+        margin-bottom: 0;
+        color: $primary--500;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__pharmacy {
+    padding: $size-one;
+    background: white;
+
+    h5,
+    p {
+      margin: 0;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+  }
+
+  &__details {
+    margin: 0 -$size-double;
+    .l-grid__item {
+      padding: $size-double;
+    }
+
+    .c-side-list {
+      padding: $size-one;
+      border: 1px solid $gray--300;
+      border-radius: 3px;
+    }
+  }
+
+  &__card {
+    padding: $size-one;
+    border: 1px solid $gray--300;
+    border-radius: 3px;
+
+    &-title {
+      margin-bottom: $size-one;
+      border-bottom: 1px solid $gray--300;
+    }
+
+    &-value {
+      h5 {
+        font-size: 1.1rem;
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &-icon {
+      margin-right: $size-half;
+    }
+
+    &-number {
+      h6,
+      p {
+        margin: 0;
+      }
+
+      h6 {
+        font-weight: 400;
+      }
+
+      p {
+        color: $gray--700;
+      }
+    }
+  }
+}

@@ -63,6 +63,7 @@ hr {
 .c-link {
   color: $primary--500;
   white-space: nowrap;
+  text-decoration: underline;
 
   &--clear {
     text-decoration: none;
@@ -94,6 +95,32 @@ hr {
   &__icon {
     width: 26px;
     margin-right: $size-one;
+  }
+}
+
+.c-side-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: $size-half 0;
+  }
+
+  &__title {
+    width: 40%;
+    margin: 0 !important;
+  }
+
+  &__value {
+    width: 60%;
+    margin: 0 !important;
+  }
+
+  hr {
+    margin: $size-half 0;
   }
 }
 

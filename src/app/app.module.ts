@@ -51,6 +51,8 @@ import { RateUsModalComponent } from './pages/flow/modals/rate-us/rate-us.compon
 import { SubscriptionsModalComponent } from './pages/flow/modals/subscriptions/subscriptions.component';
 import { FollowUpModalComponent } from './pages/flow/modals/follow-up/follow-up.component';
 import { DashboardComponent } from './pages/flow/pages/dashboard/dashboard.component';
+import { WeeklyIntakeViewComponent } from './pages/flow/components/weekly-intake-view/weekly-intake-view.component';
+import { ProgressFlowComponent } from './pages/flow/components/progress-flow/progress-flow.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -92,7 +94,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     RateUsModalComponent,
     SubscriptionsModalComponent,
     FollowUpModalComponent,
-    DashboardComponent
+    DashboardComponent,
+    WeeklyIntakeViewComponent,
+    ProgressFlowComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FlowPageHeaderComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
+  @Input() currentStep = 0;
+  @Input() currentStepComplete = false;
 
   constructor() { }
 
