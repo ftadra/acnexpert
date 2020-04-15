@@ -325,5 +325,8 @@
     "TREATMENT_HISTORY_TITLE": "Treatment History",
     "PROFILE_TITLE": "Profile",
     "MESSAGES_TITLE": "Messages"
+  },
+  "ERRORS": {
+    "DEFAULT_HTTP_ERROR": "Something went wrong!"
   }
 }

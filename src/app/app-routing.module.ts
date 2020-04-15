@@ -14,6 +14,7 @@ import { CompleteComponent } from './pages/flow/pages/complete/complete.componen
 import { DashboardComponent } from './pages/flow/pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth/auth.guard';
 import { FlowGuard } from './guards/flow/flow.guard';
+import { CallbackComponent } from './pages/callback/callback.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+  { path: 'callback', component: CallbackComponent },
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'about', component: AboutComponent },
@@ -33,12 +35,12 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'create', pathMatch: 'full' },
       { path: 'create', component: CreateAccountComponent, canActivate: [FlowGuard] },
-      { path: 'clinical', component: ClinicalDetailsComponent, canActivate: [FlowGuard] },
-      { path: 'billing', component: BillingComponent, canActivate: [FlowGuard] },
-      { path: 'photos', component: PhotosComponent, canActivate: [FlowGuard] },
-      { path: 'thanks', component: ThanksComponent, canActivate: [FlowGuard] },
-      { path: 'dashboard', component: DashboardComponent, canActivate: [FlowGuard] },
-      { path: 'complete', component: CompleteComponent, canActivate: [FlowGuard] }
+      { path: 'clinical', component: ClinicalDetailsComponent, canActivate: [AuthGuard, FlowGuard] },
+      { path: 'billing', component: BillingComponent, canActivate: [AuthGuard, FlowGuard] },
+      { path: 'photos', component: PhotosComponent, canActivate: [AuthGuard, FlowGuard] },
+      { path: 'thanks', component: ThanksComponent, canActivate: [AuthGuard, FlowGuard] },
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard, FlowGuard] },
+      { path: 'complete', component: CompleteComponent, canActivate: [AuthGuard, FlowGuard] }
     ]
   },
   {

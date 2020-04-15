@@ -21,6 +21,9 @@ hr {
 }
 
 .c-btn {
+  display: flex;
+  align-items: center;
+
   padding: $size-half $size-one-half;
   border-radius: $size-double;
   background: $primary--500;
@@ -34,6 +37,8 @@ hr {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
+
+  cursor: pointer;
 
   &--large {
     padding: $size-one $size-double;
@@ -57,6 +62,28 @@ hr {
     background: transparent;
     border: 0;
     color: $primary--500;
+  }
+
+  &:hover {
+    opacity: 0.95;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__loading {
+    width: $size-double;
+    height: $size-double;
+    margin: -$size-half;
+    margin-left: -$size-one;
+    margin-right: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__arrow {
+    margin-left: $size-half;
   }
 }
 
