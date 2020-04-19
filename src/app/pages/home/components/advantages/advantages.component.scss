@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     max-width: 70rem;
-    margin: $size-double 0;
+    margin-bottom: $size-double;
 
     &-left,
     &-right {
@@ -53,7 +53,8 @@
 
       .c-list__item {
         margin: $size-half 0;
-        padding: 0.75rem;
+        padding: $size-one;
+        font-size: 1.1rem;
         font-weight: 500;
         cursor: pointer;
 
@@ -91,5 +92,6 @@
   h5 {
     margin: 0;
     text-align: center;
+    line-height: 1.6em;
   }
 }

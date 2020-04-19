@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
+import { QuizModalComponent } from '../../pages/home/modals/quiz/quiz.component';
 
 @Component({
   selector: 'app-register-cta',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterCtaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
   }
 
+  openQuiz() {
+    this.modalService.open(QuizModalComponent);
+  }
 }

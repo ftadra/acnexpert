@@ -21,7 +21,9 @@
     border: 1px solid $gray--200;
 
     .e-faq-item__header {
-      font-weight: 600;
+      p {
+        font-weight: 500;
+      }
     }
   }
 
@@ -31,6 +33,7 @@
 
     p {
       margin: 0;
+      color: $gray--900;
     }
 
     fa-icon {

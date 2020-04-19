@@ -1,8 +1,8 @@
 <div class="l-container">
     <div class="e-title l-linelength l-linelength--small">
-        <h4>
+        <h3>
             {{ "HOME.HOW_IT_WORKS.TITLE" | translate }}
-        </h4>
+        </h3>
         <p>
             {{ "HOME.HOW_IT_WORKS.DESCRIPTION" | translate }}
         </p>
@@ -58,18 +58,23 @@
             </p>
         </div>
 
-        <div class="l-grid__item u-flex-justify-center">
-            <h4>
-                {{ "HOME.HOW_IT_WORKS.BOX_6_TITLE" | translate }}
-            </h4>
-            <p>
-                {{ "HOME.HOW_IT_WORKS.BOX_6_DESCRIPTION" | translate }}
-            </p>
+        <div class="l-grid__item l-grid__item--register u-flex-justify-center">
+            <div>
+                <h3>
+                    {{ "HOME.HOW_IT_WORKS.BOX_6_TITLE" | translate }}
+                </h3>
+                <p>
+                    {{ "HOME.HOW_IT_WORKS.BOX_6_DESCRIPTION" | translate }}
+                </p>
 
-            <div class="u-margin-top-double">
-                <a class="c-btn">
-                    {{ "HOME.HOW_IT_WORKS.BOX_6_CTA" | translate }}
-                </a>
+                <div class="u-margin-top-double">
+                    <app-button
+                        arrow="true"
+                        (click)="openQuiz()"
+                    >
+                        {{ "HOME.HOW_IT_WORKS.BOX_6_CTA" | translate }}
+                    </app-button>
+                </div>
             </div>
         </div>
     </div>

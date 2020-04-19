@@ -56,6 +56,7 @@ import { ProgressFlowComponent } from './pages/flow/components/progress-flow/pro
 import { LoadingComponent } from './components/loading/loading.component';
 import { CallbackComponent } from './pages/callback/callback.component';
 import { ButtonComponent } from './components/button/button.component';
+import { UserService } from './services/user.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -124,7 +125,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     DomService,
-    ModalService
+    ModalService,
+    UserService
   ],
   entryComponents: [
     QuizModalComponent,

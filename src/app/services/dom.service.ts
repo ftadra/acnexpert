@@ -45,8 +45,9 @@ export class DomService {
 
     }
 
-    public removeComponent() {
+    public removeComponent(parentId: string) {
         this.appRef.detachView(this.childComponentRef.hostView);
+
         this.childComponentRef.destroy();
     }
 

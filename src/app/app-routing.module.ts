@@ -31,16 +31,16 @@ const routes: Routes = [
   { path: 'pricing', component: PricingComponent },
   {
     path: 'account',
-    canActivate: [AuthGuard],
+    canActivate: [FlowGuard],
     children: [
       { path: '', redirectTo: 'create', pathMatch: 'full' },
-      { path: 'create', component: CreateAccountComponent, canActivate: [FlowGuard] },
-      { path: 'clinical', component: ClinicalDetailsComponent, canActivate: [AuthGuard, FlowGuard] },
-      { path: 'billing', component: BillingComponent, canActivate: [AuthGuard, FlowGuard] },
-      { path: 'photos', component: PhotosComponent, canActivate: [AuthGuard, FlowGuard] },
-      { path: 'thanks', component: ThanksComponent, canActivate: [AuthGuard, FlowGuard] },
-      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard, FlowGuard] },
-      { path: 'complete', component: CompleteComponent, canActivate: [AuthGuard, FlowGuard] }
+      { path: 'create', component: CreateAccountComponent },
+      { path: 'clinical', component: ClinicalDetailsComponent, canActivate: [AuthGuard] },
+      { path: 'billing', component: BillingComponent, canActivate: [AuthGuard] },
+      { path: 'photos', component: PhotosComponent, canActivate: [AuthGuard] },
+      { path: 'thanks', component: ThanksComponent, canActivate: [AuthGuard] },
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'complete', component: CompleteComponent, canActivate: [AuthGuard] }
     ]
   },
   {

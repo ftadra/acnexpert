@@ -4,7 +4,7 @@
 .e-container {
   background: $primary--100;
   background-image: url("../../../../../assets/images/Decoration.svg");
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 .l-container {
@@ -17,6 +17,7 @@
     p {
       margin: 0;
       color: $gray--800;
+      font-size: 1.2rem;
     }
   }
 
@@ -56,5 +57,9 @@
     padding: $size-double;
     margin-left: -2rem;
     margin-top: 3rem;
+
+    p {
+      font-size: 1.1rem;
+    }
   }
 }

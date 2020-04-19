@@ -4,13 +4,12 @@
 
 export const environment = {
   production: false,
-  api: 'api',
+  api: 'http://localhost:8000',
   auth: {
-    clientID: 'YOUR-AUTH0-CLIENT-ID',
-    domain: 'YOUR-AUTH0-DOMAIN', // e.g., https://you.auth0.com/
-    audience: 'YOUR-AUTH0-API-IDENTIFIER', // e.g., http://localhost:3001
-    redirect: 'http://localhost:4200/callback',
-    scope: 'openid profile email'
+    clientID: 'e6ueeRhjikVSAB8KjArehWzEfYzBmeUY',
+    domain: 'acnexpert.auth0.com',
+    redirect: 'callback',
+    audience: 'https://acnexpert.auth0.com/api/v2/'
   }
 };
 

@@ -10,7 +10,8 @@
 
     p {
       margin: 0;
-      color: $gray--800;
+      color: $gray--700;
+      font-size: 1.2rem;
     }
   }
 
@@ -20,8 +21,18 @@
     .l-grid__item {
       padding: $size-one $size-quad;
 
+      &--register {
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
       img {
         margin-bottom: $size-double;
+      }
+
+      h6 {
+        font-size: 1.3rem;
       }
 
       p {

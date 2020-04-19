@@ -25,6 +25,8 @@
 
   ul {
     display: flex;
+    align-items: center;
+    margin: 0;
 
     li {
       margin: 0 15px;
@@ -38,11 +40,8 @@
 
   .c-link {
     color: $gray--900;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
-  }
-
-  .c-btn {
-    font-size: 0.9rem;
+    letter-spacing: 1px;
   }
 }

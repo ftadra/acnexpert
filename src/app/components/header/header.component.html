@@ -19,7 +19,7 @@
                     >
                 </a>
             </div>
-            <div class="l-grid__item u-align-h-center">
+            <div class="l-grid__item u-flex-align-end">
                 <ul class="u-align-v-right">
                     <li>
                         <a
@@ -56,12 +56,20 @@
                     <li>
                         <span class="c-v-separator"></span>
                     </li>
-                    <li>
+                    <li *ngIf="!userService.loggedIn">
                         <a
                             class="c-link c-link--clear"
-                            [routerLink]="['/login']"
+                            (click)="userService.login()"
                         >
                             {{ "HEADER.LOGIN_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li *ngIf="userService.loggedIn">
+                        <a
+                            class="c-link c-link--clear"
+                            (click)="userService.logout()"
+                        >
+                            {{ "HEADER.LOGOUT_LINK" | translate }}
                         </a>
                     </li>
                     <li>

@@ -24,7 +24,7 @@ hr {
   display: flex;
   align-items: center;
 
-  padding: $size-half $size-one-half;
+  padding: $size-tq $size-one-half;
   border-radius: $size-double;
   background: $primary--500;
   border: 0;
@@ -32,7 +32,8 @@ hr {
 
   color: $white;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -41,7 +42,8 @@ hr {
   cursor: pointer;
 
   &--large {
-    padding: $size-one $size-double;
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
   }
 
   &--inverted {
@@ -53,7 +55,7 @@ hr {
     background: transparent;
     border: 2px solid white;
 
-    .c-btn--inverted {
+    &.c-btn--inverted {
       border-color: $primary--500;
     }
   }
@@ -66,7 +68,7 @@ hr {
 
   &:hover {
     opacity: 0.95;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   }
 
   &__loading {
@@ -91,6 +93,11 @@ hr {
   color: $primary--500;
   white-space: nowrap;
   text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   &--clear {
     text-decoration: none;
@@ -111,10 +118,11 @@ hr {
     display: flex;
     align-items: center;
     padding: 0.75rem 0;
+    color: $gray--700;
   }
 
   &__checkmark {
-    margin-right: $size-half;
+    margin-right: $size-one;
     color: $primary--500;
     font-size: 1.2rem;
   }

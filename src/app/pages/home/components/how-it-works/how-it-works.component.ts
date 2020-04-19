@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../../../services/modal.service';
+import { QuizModalComponent } from '../../modals/quiz/quiz.component';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -8,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeHowItWorksComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
   }
 
+  openQuiz() {
+    this.modalService.open(QuizModalComponent);
+  }
 }

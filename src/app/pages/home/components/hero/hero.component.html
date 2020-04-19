@@ -6,9 +6,9 @@
                 <h1 class="e-hero__title">
                     {{ "HOME.HERO.TITLE_MAIN" | translate }}
                 </h1>
-                <p class="e-hero__description l-linelength l-linelength--tiny">
+                <h6 class="e-hero__description l-linelength l-linelength--xs">
                     {{ "HOME.HERO.DESCRIPTION" | translate }}
-                </p>
+                </h6>
                 <div class="u-display-flex u-margin-top-double">
                     <app-button
                         inverted="true"
@@ -19,7 +19,7 @@
                     </app-button>
 
                     <a
-                        class="c-btn c-btn--outline"
+                        class="c-btn c-btn--large c-btn--outline"
                         [routerLink]="['/account/create']"
                     >
                         {{ "HOME.HERO.ACCOUNT_CTA" | translate }}

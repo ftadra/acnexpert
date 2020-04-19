@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +11,11 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   public isInverted = false;
+  public loginURL = `${environment.api}/login/auth0`;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public userService: UserService) { }
 
   ngOnInit() {
     this.router.events.subscribe(() => {
@@ -18,4 +23,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  login() {
+    this.userService.login();
+  }
 }

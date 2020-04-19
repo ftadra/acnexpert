@@ -1,4 +1,5 @@
 @import "../../../../../assets/styles/colors.scss";
+@import "../../../../../assets/styles/sizing.scss";
 
 .e-hero {
   padding: 140px 0;
@@ -17,6 +18,13 @@
   }
 
   &__description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4em;
+    opacity: 0.9;
+  }
+
+  .c-btn {
+    margin-left: $size-one;
   }
 }

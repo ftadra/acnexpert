@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+.u-flex-align-end {
+  align-items: flex-end;
+}
+
 .u-flex-justify-center {
   justify-content: center;
 }
@@ -163,7 +167,7 @@
 }
 
 .u-margin-top-large {
-  margin-top: 100px !important;
+  margin-top: 70px !important;
 }
 
 .u-margin-top-med {
@@ -191,7 +195,7 @@
 }
 
 .u-margin-bottom-large {
-  margin-bottom: 100px !important;
+  margin-bottom: 70px !important;
 }
 
 .u-margin-bottom-med {

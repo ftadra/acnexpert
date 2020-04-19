@@ -1,3 +1,18 @@
-.l-grid__item--illustration {
-  padding: 0 60px;
+@import "../../../../../assets/styles/colors.scss";
+
+.e-whyaccutane {
+  .l-grid__item--illustration {
+    padding: 0 60px;
+  }
+
+  .c-list {
+    &__item {
+      color: $gray--700;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.2rem;
+  }
 }
