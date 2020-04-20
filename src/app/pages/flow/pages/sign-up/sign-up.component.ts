@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import Auth0Lock from 'auth0-lock';
-import { TranslateService } from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -23,7 +22,7 @@ export class SignUpComponent implements OnInit {
       primaryColor: '#1da499'
     },
     auth: {
-      redirectUrl: 'http://localhost:4200/account',    // If not specified, defaults to the current page
+      redirectUrl: environment.auth.redirect,    // If not specified, defaults to the current page
       responseType: 'token id_token',
       params: {
         scope: 'openid email profile'                // Learn about scopes: https://auth0.com/docs/scopes

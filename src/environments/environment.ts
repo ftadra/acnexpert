@@ -9,7 +9,7 @@ export const environment = {
   auth: {
     clientID: 'e6ueeRhjikVSAB8KjArehWzEfYzBmeUY',
     domain: 'acnexpert.auth0.com',
-    redirect: 'callback',
+    redirect: 'http://localhost:4200/callback',
     audience: 'https://acnexpert.auth0.com/api/v2/'
   }
 };
