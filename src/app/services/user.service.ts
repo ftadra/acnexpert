@@ -39,13 +39,14 @@ export class UserService {
 
   private currentStep = 0;
   private availableSteps = {
-    0: 'create',
-    1: 'clinical',
-    2: 'billing',
-    3: 'photos',
-    4: 'thanks',
-    5: 'dashboard',
-    6: 'complete'
+    0: 'signup',
+    1: 'create',
+    2: 'clinical',
+    3: 'billing',
+    4: 'photos',
+    5: 'thanks',
+    6: 'dashboard',
+    7: 'complete'
   };
 
   constructor(private router: Router) {

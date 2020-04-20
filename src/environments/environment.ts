@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   api: 'http://localhost:8000',
+  termsUrl: 'terms.pdf',
   auth: {
     clientID: 'e6ueeRhjikVSAB8KjArehWzEfYzBmeUY',
     domain: 'acnexpert.auth0.com',

@@ -15,6 +15,7 @@ import { DashboardComponent } from './pages/flow/pages/dashboard/dashboard.compo
 import { AuthGuard } from './guards/auth/auth.guard';
 import { FlowGuard } from './guards/flow/flow.guard';
 import { CallbackComponent } from './pages/callback/callback.component';
+import { SignUpComponent } from './pages/flow/pages/sign-up/sign-up.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
     canActivate: [FlowGuard],
     children: [
       { path: '', redirectTo: 'create', pathMatch: 'full' },
-      { path: 'create', component: CreateAccountComponent },
+      { path: 'signup', component: SignUpComponent },
+      { path: 'create', component: CreateAccountComponent, canActivate: [AuthGuard] },
       { path: 'clinical', component: ClinicalDetailsComponent, canActivate: [AuthGuard] },
       { path: 'billing', component: BillingComponent, canActivate: [AuthGuard] },
       { path: 'photos', component: PhotosComponent, canActivate: [AuthGuard] },

@@ -1,0 +1,130 @@
+@import "../styles/sizing.scss";
+@import "../styles/colors.scss";
+
+body #lock-form {
+  .auth0-lock {
+    font-family: "Roboto";
+    font-size: 1rem;
+    margin: 0;
+
+    .auth0-lock-widget {
+      width: 400px;
+      margin: 0;
+      transition: none;
+    }
+
+    .auth0-lock-cred-pane-internal-wrapper {
+      height: auto;
+      min-height: 0;
+      max-height: unset;
+    }
+
+    .auth0-lock-form {
+      padding: 0;
+
+      p {
+        font-size: 1rem;
+        background-image: linear-gradient(
+          0deg,
+          transparent 2px,
+          $gray--300 2px,
+          transparent 3px
+        );
+        background-position: 0 17px;
+
+        span {
+          padding: 0 10px;
+          background: white;
+        }
+      }
+
+      .auth0-lock-input-block {
+        &:before {
+          display: inline-block;
+          content: "";
+          margin-bottom: $size-half;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        &.auth0-lock-input-email {
+          &:before {
+            content: "Email Address";
+          }
+        }
+
+        &.auth0-lock-input-password {
+          &:before {
+            content: "Password";
+          }
+        }
+
+        .auth0-lock-input-wrap {
+          border: 1px solid $gray--300;
+          border-radius: 3px;
+          background: $white;
+
+          input {
+            height: auto;
+            padding: $size-tq;
+            padding-left: 0;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .auth0-lock-header {
+      display: none !important;
+    }
+
+    .auth0-lock-terms {
+      background: transparent;
+      margin-top: $size-double;
+      border-top: 1px solid $gray--300;
+      padding: 0;
+      padding-top: $size-double;
+      font-size: 1rem;
+      text-align: left;
+
+      label {
+        display: flex;
+
+        input {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .auth0-lock-submit {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+
+      width: auto;
+      padding: $size-tq $size-one-half;
+      border-radius: $size-double;
+      background: $primary--500;
+      margin-top: $size-double;
+      border: 0;
+      appearance: none;
+
+      color: $white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: none !important;
+
+      cursor: pointer;
+
+      .auth0-label-submit {
+        height: auto;
+        line-height: inherit;
+      }
+    }
+  }
+}

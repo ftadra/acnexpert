@@ -57,6 +57,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { CallbackComponent } from './pages/callback/callback.component';
 import { ButtonComponent } from './components/button/button.component';
 import { UserService } from './services/user.service';
+import { SignUpComponent } from './pages/flow/pages/sign-up/sign-up.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -103,7 +104,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProgressFlowComponent,
     LoadingComponent,
     CallbackComponent,
-    ButtonComponent
+    ButtonComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
