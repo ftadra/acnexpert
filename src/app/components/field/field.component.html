@@ -6,6 +6,7 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
   </div>
 
@@ -14,6 +15,7 @@
       type="password"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
   </div>
 
@@ -23,12 +25,17 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
       email
     />
   </div>
 
   <div *ngSwitchCase="'select'">
-    <select [(ngModel)]="value" (ngModelChange)="updateChanges()">
+    <select
+      [(ngModel)]="value"
+      (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
+    >
       <option *ngFor="let opt of options" [value]="opt">
         {{ opt }}
       </option>
@@ -40,10 +47,15 @@
       [options]="dateOptions"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     ></my-date-picker>
   </div>
 
-  <div class="c-field__file" *ngSwitchCase="'file'">
+  <div
+    class="c-field__file"
+    *ngSwitchCase="'file'"
+    [attr.disabled]="isDisabled"
+  >
     <input
       [id]="key + '-file'"
       type="file"
@@ -99,6 +111,7 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
     <span></span>
   </div>
@@ -111,6 +124,7 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
   </div>
 
@@ -122,16 +136,18 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
   </div>
 
   <div *ngSwitchCase="'phone'">
     <input
       type="phone"
+      phone
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
-      phone
+      [disabled]="isDisabled"
     />
   </div>
 
@@ -141,20 +157,22 @@
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     />
   </div>
 
   <div *ngSwitchCase="'textarea'">
     <textarea
+      rows="3"
       [placeholder]="placeholder"
       [(ngModel)]="value"
-      rows="3"
       (ngModelChange)="updateChanges()"
+      [disabled]="isDisabled"
     ></textarea>
   </div>
 
   <div *ngSwitchCase="'boolean'">
-    <div class="c-boolean">
+    <div class="c-boolean" [attr.disabled]="isDisabled">
       <input
         class="c-boolean__input"
         type="radio"
@@ -184,7 +202,7 @@
   </div>
 
   <div *ngSwitchCase="'multi'">
-    <div class="c-multi">
+    <div class="c-multi" [attr.disabled]="isDisabled">
       <div *ngFor="let option of options; let index = index">
         <input
           class="c-multi__input"
@@ -210,7 +228,7 @@
   </div>
 
   <div *ngSwitchCase="'score'">
-    <div class="c-score">
+    <div class="c-score" [attr.disabled]="isDisabled">
       <div *ngFor="let score of _scores; let index = index">
         <input
           class="c-score__input"

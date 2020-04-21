@@ -25,11 +25,15 @@ export class FieldComponent implements ControlValueAccessor, OnInit {
   @Input() description = '';
   @Input() options = [];
   @Input() icon: 'front' | 'back' | 'chest' | 'id' | 'left' | 'right' = null;
+  // tslint:disable-next-line: no-input-rename
+  @Input('disabled') isDisabled = false;
 
   value: any;
 
   // used for multi
+  // tslint:disable-next-line: variable-name
   _checked = {};
+  // tslint:disable-next-line: variable-name
   _scores = Array(10).fill(0);
 
   public dateOptions: IMyDpOptions = {
@@ -90,5 +94,9 @@ export class FieldComponent implements ControlValueAccessor, OnInit {
 
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean) {
+    this.isDisabled = isDisabled;
   }
 }

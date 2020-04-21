@@ -1,4 +1,5 @@
 @import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/sizing.scss";
 
 .e-header {
   background: $white;
@@ -35,6 +36,11 @@
       &:last-child {
         margin-right: 0;
       }
+
+      .c-v-separator {
+        width: 2px;
+        height: $size-one-half;
+      }
     }
   }
 
@@ -43,5 +49,26 @@
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 1px;
+  }
+}
+
+.e-profile {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  &__image {
+    max-width: 38px;
+    max-height: 38px;
+    border-radius: 50%;
+    margin-right: $size-half;
+  }
+
+  &__name {
+    color: $gray--900;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: nowrap;
   }
 }

@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  public user$ = this.userService.user$;
   public isInverted = false;
   public loginURL = `${environment.api}/login/auth0`;
 

@@ -19,6 +19,7 @@ export class ButtonComponent implements OnInit {
   @Input() icon: ['fas' | 'fab', string];
   @Input() type: boolean;
   @Input() loading: boolean;
+  @Input() disabled: boolean;
 
   // tslint:disable-next-line: no-output-native
   @Output() click = new EventEmitter<string>();

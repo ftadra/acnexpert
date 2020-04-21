@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-callback',
@@ -9,11 +10,10 @@ import { UserService } from 'src/app/services/user.service';
 export class CallbackComponent implements OnInit {
 
   constructor(
-    private userService: UserService
+    private router: Router
   ) { }
 
   ngOnInit() {
-    //this.userService.handleLoginCallback();
+    this.router.navigate(['/account']);
   }
-
 }

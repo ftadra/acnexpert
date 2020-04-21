@@ -15,6 +15,8 @@ export class FlowGuard implements CanActivate {
   }
 
   public checkStep(step: string): boolean {
+    this.userService.calculateStep();
+
     if (this.userService.isCurrentStep(step)) {
       return true;
     } else {

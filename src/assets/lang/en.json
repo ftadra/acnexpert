@@ -157,7 +157,6 @@
     "TERMS_TEXT": "I have read and accepted the",
     "TERMS_LINK": "terms and conditions",
     "PRIVACY_LINK": "privacy terms",
-    "CREATE_ACCOUNT_BUTTON": "Create Account",
     "IPLEDGE_TOOLTIP": "We need this to identify you with ipledge and your pharmacy."
   },
   "FIELDS": {
@@ -186,7 +185,7 @@
     "PHARMACY_ADDRESS": "Pharmacy Address",
     "PHARMACY_ADDRESS_PLACEHOLDER": "108-7 Queens Blvd, Forest Hills, NY 11375, United States",
     "SOCIAL_SECURITY": "Social Security No",
-    "SOCIAL_SECURITY_PLACEHOLDER": "Last 4 numbers",
+    "SOCIAL_SECURITY_PLACEHOLDER": "Last 4 digits",
     "CARD_HOLDER_NAME": "Cardholder's Full Name",
     "CARD_HOLDER_NAME_PLACEHOLDER": "John Doe III",
     "CARD_NUMBER": "Card Number",

@@ -22,10 +22,11 @@ export class SignUpComponent implements OnInit {
       primaryColor: '#1da499'
     },
     auth: {
-      redirectUrl: environment.auth.redirect,    // If not specified, defaults to the current page
+      redirectUrl: `${window.location.origin}/${environment.auth.redirect}`,
+      audience: environment.auth.audience,
       responseType: 'token id_token',
       params: {
-        scope: 'openid email profile'                // Learn about scopes: https://auth0.com/docs/scopes
+        scope: 'openid email profile'
       }
     }
   });
