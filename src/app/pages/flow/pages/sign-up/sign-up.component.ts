@@ -9,12 +9,10 @@ import { environment } from 'src/environments/environment';
 })
 export class SignUpComponent implements OnInit {
   // Initializing our Auth0Lock
-  private lock;
-
-  constructor() { }
-
-  ngOnInit() {
-    this.lock = new Auth0Lock('e6ueeRhjikVSAB8KjArehWzEfYzBmeUY', 'acnexpert.auth0.com', {
+  private lock = new Auth0Lock(
+    environment.auth.clientID,
+    environment.auth.domain,
+    {
       container: 'lock-form',
       allowLogin: false,
       loginAfterSignUp: true,
@@ -36,6 +34,9 @@ export class SignUpComponent implements OnInit {
       }
     });
 
+  constructor() { }
+
+  ngOnInit() {
     this.lock.show();
   }
 

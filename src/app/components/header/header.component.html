@@ -1,66 +1,104 @@
-<header class="e-header" [class.e-header--inverted]="isInverted">
-  <div class="l-container">
-    <div class="l-grid l-grid--c2">
-      <div class="l-grid__item">
-        <a class="e-logo" [routerLink]="['/home']">
-          <img *ngIf="!isInverted" src="./assets/images/logo.png" />
-          <img *ngIf="isInverted" src="./assets/images/logo-white.png" />
-        </a>
-      </div>
-      <div class="l-grid__item u-flex-align-end">
-        <ul class="u-align-v-right">
-          <li>
-            <a class="c-link c-link--clear" [routerLink]="['/accutane']">
-              {{ "HEADER.ACCUTANE_LINK" | translate }}
-            </a>
-          </li>
-          <li>
-            <a class="c-link c-link--clear" [routerLink]="['/pricing']">
-              {{ "HEADER.PRICING_LINK" | translate }}
-            </a>
-          </li>
-          <li>
-            <a class="c-link c-link--clear" [routerLink]="['/about']">
-              {{ "HEADER.ABOUT_LINK" | translate }}
-            </a>
-          </li>
-          <li>
-            <a class="c-link c-link--clear" [routerLink]="['/faq']">
-              {{ "HEADER.FAQ_LINK" | translate }}
-            </a>
-          </li>
-          <li>
-            <span class="c-v-separator"></span>
-          </li>
-          <li *ngIf="!userService.isAuthenticated()">
-            <a class="c-link c-link--clear" (click)="userService.login()">
-              {{ "HEADER.LOGIN_LINK" | translate }}
-            </a>
-          </li>
-          <li *ngIf="user$ | async as user; else getStarted">
-            <h6 class="e-profile">
-              <img class="e-profile__image" [src]="user.picture" />
-              <span class="e-profile__name">{{ user.given_name }}</span>
-            </h6>
-          </li>
-          <ng-template #getStarted>
-            <li>
-              <a
-                [routerLink]="['/account']"
-                class="c-btn"
-                [class.c-btn--inverted]="isInverted"
-              >
-                {{ "HEADER.CTA" | translate }}
-              </a>
-            </li>
-          </ng-template>
-          <li *ngIf="userService.isAuthenticated()">
-            <a class="c-link c-link--clear" (click)="userService.logout()">
-              {{ "HEADER.LOGOUT_LINK" | translate }}
-            </a>
-          </li>
-        </ul>
-      </div>
+<header
+    class="e-header"
+    [class.e-header--inverted]="isInverted"
+>
+    <div class="l-container">
+        <div class="l-grid l-grid--c2">
+            <div class="l-grid__item">
+                <a
+                    class="e-logo"
+                    [routerLink]="['/home']"
+                >
+                    <img
+                        *ngIf="!isInverted"
+                        src="./assets/images/logo.png"
+                    >
+                    <img
+                        *ngIf="isInverted"
+                        src="./assets/images/logo-white.png"
+                    >
+                </a>
+            </div>
+            <div class="l-grid__item u-flex-align-end">
+                <ul class="u-align-v-right">
+                    <li>
+                        <a
+                            class="c-link c-link--clear"
+                            [routerLink]="['/accutane']"
+                        >
+                            {{ "HEADER.ACCUTANE_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="c-link c-link--clear"
+                            [routerLink]="['/pricing']"
+                        >
+                            {{ "HEADER.PRICING_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="c-link c-link--clear"
+                            [routerLink]="['/about']"
+                        >
+                            {{ "HEADER.ABOUT_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="c-link c-link--clear"
+                            [routerLink]="['/faq']"
+                        >
+                            {{ "HEADER.FAQ_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li>
+                        <span class="c-v-separator"></span>
+                    </li>
+                    <li *ngIf="!userService.isAuthenticated()">
+                        <a
+                            class="c-link c-link--clear"
+                            (click)="userService.login()"
+                        >
+                            {{ "HEADER.LOGIN_LINK" | translate }}
+                        </a>
+                    </li>
+                    <li *ngIf="user$ | async as user; else getStarted">
+                        <a
+                            [routerLink]="['/account']"
+                            class="c-link c-link--clear"
+                        >
+                            <h6 class="e-profile">
+                                <img
+                                    class="e-profile__image"
+                                    [src]="user.picture"
+                                >
+                                <span class="e-profile__name">{{ user.given_name }}</span>
+                            </h6>
+                        </a>
+                    </li>
+                    <ng-template #getStarted>
+                        <li>
+                            <a
+                                [routerLink]="['/account']"
+                                class="c-btn"
+                                [class.c-btn--inverted]="isInverted"
+                            >
+                                {{ "HEADER.CTA" | translate }}
+                            </a>
+                        </li>
+                    </ng-template>
+                    <li *ngIf="userService.isAuthenticated()">
+                        <a
+                            class="c-link c-link--clear"
+                            (click)="userService.logout()"
+                        >
+                            {{ "HEADER.LOGOUT_LINK" | translate }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </header>

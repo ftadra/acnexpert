@@ -58,14 +58,14 @@
   margin: 0;
 
   &__image {
-    max-width: 38px;
-    max-height: 38px;
+    max-width: 36px;
+    max-height: 36px;
+    border: 1px solid white;
     border-radius: 50%;
-    margin-right: $size-half;
+    margin-right: $size-one;
   }
 
   &__name {
-    color: $gray--900;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 1px;

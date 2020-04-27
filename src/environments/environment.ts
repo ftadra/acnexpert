@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:8000',
+  api: 'http://18.204.203.116:80',
   termsUrl: 'terms.pdf',
   auth: {
     clientID: 'e6ueeRhjikVSAB8KjArehWzEfYzBmeUY',

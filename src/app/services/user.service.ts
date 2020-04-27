@@ -4,7 +4,10 @@ import { environment } from './../../environments/environment';
 import { Router } from '@angular/router';
 import Auth0Lock from 'auth0-lock';
 import { User } from '../interfaces/user.interface';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { ApiStatusService } from '../api/status.service';
+import { finalize, tap, catchError, map } from 'rxjs/operators';
+import { SignupStatus } from '../interfaces/signup-status.interface';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -17,8 +20,8 @@ export class UserService {
     },
     auth: {
       redirectUrl: `${window.location.origin}/${environment.auth.redirect}`,
-      responseType: 'token id_token',
       audience: environment.auth.audience,
+      responseType: 'token id_token',
       params: {
         scope: 'openid email profile'
       }
@@ -29,14 +32,10 @@ export class UserService {
     closable: true,
     allowShowPassword: true,
     allowSignUp: false,
-    autoclose: true
+    autoClose: true
   };
 
-  private lock = new Auth0Lock(
-    environment.auth.clientID,
-    environment.auth.domain,
-    this.auth0Options
-  );
+  private lock;
 
   private currentStep = 0;
   private availableSteps = {
@@ -50,28 +49,36 @@ export class UserService {
     7: 'complete'
   };
 
-  constructor(private router: Router) {
-    console.log('singleton');
+  constructor(
+    private router: Router,
+    private statusService: ApiStatusService) {
+    setTimeout(() => {
+      this.lock = new Auth0Lock(
+        environment.auth.clientID,
+        environment.auth.domain,
+        this.auth0Options
+      );
 
-    this.lock.on('authenticated', (authResult: any) => {
-      this.lock.getUserInfo(authResult.accessToken, (error, profile) => {
-        if (error) {
-          throw new Error(error);
-        }
+      this.lock.on('authenticated', (authResult: any) => {
+        this.lock.getUserInfo(authResult.accessToken, (error, profile) => {
+          if (error) {
+            throw new Error(error);
+          }
 
-        localStorage.setItem('token', authResult.id_token);
-        localStorage.setItem('profile', JSON.stringify(profile));
+          localStorage.setItem('token', authResult.idToken);
+          localStorage.setItem('profile', JSON.stringify(profile));
 
-        this.setUser(profile);
-        this.router.navigate(['/']);
+          this.setUser(profile);
+          this.router.navigate(['/account']);
+        });
       });
-    });
 
-    this.lock.on('authorization_error', error => {
-      console.log('something went wrong', error);
-    });
+      this.lock.on('authorization_error', error => {
+        console.log('something went wrong', error);
+      });
 
-    this.loadUser();
+      this.loadUser();
+    }, 1000);
   }
 
   // STEP LOGIC
@@ -97,13 +104,19 @@ export class UserService {
     }
   }
 
-  public calculateStep() {
+  public calculateStep(): Observable<string> {
     let step = 'signup';
-    if (this.isAuthenticated()) {
-      step = 'create';
-    }
 
-    this.setCurrentStep(step);
+    return this.statusService.getStatus()
+      .pipe(
+        map(response => {
+          step = response.status;
+          return status;
+        }),
+        finalize(() => {
+          this.setCurrentStep(step);
+        })
+      );
   }
 
   // LOGIN AND LOGOUT
