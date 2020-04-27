@@ -11,7 +11,6 @@ import { UserService } from 'src/app/services/user.service';
 export class HeaderComponent implements OnInit {
   public user$ = this.userService.user$;
   public isInverted = false;
-  public loginURL = `${environment.api}/login/auth0`;
 
   constructor(
     private router: Router,

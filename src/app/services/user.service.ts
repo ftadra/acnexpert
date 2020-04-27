@@ -29,8 +29,7 @@ export class UserService {
     closable: true,
     allowShowPassword: true,
     allowSignUp: false,
-    autoclose: true,
-    oidcConformant: true,
+    autoclose: true
   };
 
   private lock = new Auth0Lock(
@@ -52,13 +51,15 @@ export class UserService {
   };
 
   constructor(private router: Router) {
+    console.log('singleton');
+
     this.lock.on('authenticated', (authResult: any) => {
       this.lock.getUserInfo(authResult.accessToken, (error, profile) => {
         if (error) {
           throw new Error(error);
         }
 
-        localStorage.setItem('token', authResult.idToken);
+        localStorage.setItem('token', authResult.id_token);
         localStorage.setItem('profile', JSON.stringify(profile));
 
         this.setUser(profile);
@@ -127,6 +128,11 @@ export class UserService {
   }
 
   private loadUser() {
+    if (!this.isAuthenticated()) {
+      localStorage.removeItem('profile');
+      localStorage.removeItem('token');
+    }
+
     const userJson = localStorage.getItem('profile');
     if (userJson) {
       const parsedUser = JSON.parse(userJson);
